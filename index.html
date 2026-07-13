@@ -213,6 +213,16 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
   .foot-inner{flex-direction:column;text-align:center}
   .cta-box{padding:28px 18px}
 }
+/* Profile Modal */
+.profile-modal{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:2000;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .2s}
+.profile-modal.open{opacity:1;pointer-events:all}
+.profile-modal-box{background:var(--card);border:1px solid var(--border);border-radius:16px;max-width:540px;width:100%;max-height:90vh;overflow-y:auto;position:relative}
+.profile-modal-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.08);border:none;color:var(--text);font-size:18px;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1}
+.profile-modal-close:hover{background:rgba(255,255,255,.15)}
+.profile-modal-share{display:flex;align-items:center;justify-content:center;gap:8px;width:calc(100% - 32px);margin:0 16px 20px;padding:13px;background:var(--accent);color:#000;font-weight:800;font-size:14px;border:none;border-radius:10px;cursor:pointer;letter-spacing:.02em}
+.profile-modal-share:hover{opacity:.88}
+.card[data-slug]{cursor:pointer}
+.card[data-slug]:hover{border-color:#333;transform:translateY(-3px)}
 </style>
 <!-- OneSignal Push Notifications -->
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
@@ -1172,6 +1182,76 @@ function dismissBanner(){
 if('serviceWorker' in navigator){
   navigator.serviceWorker.getRegistrations().then(regs => regs.forEach(r => r.unregister()));
 }
+
+// Profile modal
+(function(){
+  var modal = document.createElement('div');
+  modal.className = 'profile-modal';
+  modal.id = 'profileModal';
+  modal.innerHTML = '<div class="profile-modal-box"><button class="profile-modal-close" id="modalClose">✕</button><div id="modalContent"></div><button class="profile-modal-share" id="modalShareBtn">↗ Share This Profile</button></div>';
+  document.body.appendChild(modal);
+
+  var currentSlug = '';
+
+  // Auto-assign slugs and click handlers to all cards
+  document.querySelectorAll('.card').forEach(function(card){
+    var nameEl = card.querySelector('.rpt-name');
+    if(!nameEl) return;
+    var slug = nameEl.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/-+$/,'');
+    card.setAttribute('data-slug', slug);
+    card.addEventListener('click', function(e){
+      if(e.target.closest('button,a,input,label')) return;
+      openProfile(slug, card);
+    });
+  });
+
+  function openProfile(slug, card){
+    if(!card) card = document.querySelector('[data-slug="'+slug+'"]');
+    if(!card) return;
+    currentSlug = slug;
+    var content = document.getElementById('modalContent');
+    content.innerHTML = card.innerHTML;
+    // Hide the card-foot share/flag buttons inside modal — we have our own share
+    var foot = content.querySelector('.card-foot');
+    if(foot) foot.style.display = 'none';
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    history.replaceState(null,'','#'+slug);
+  }
+
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    history.replaceState(null,'',location.pathname);
+    currentSlug = '';
+  }
+
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+
+  document.getElementById('modalShareBtn').addEventListener('click', function(){
+    var url = location.origin + location.pathname + '#' + currentSlug;
+    var btn = document.getElementById('modalShareBtn');
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(url).then(function(){
+        btn.textContent = '✓ Copied! Send this link.';
+        setTimeout(function(){ btn.textContent = '↗ Share This Profile'; }, 2500);
+      });
+    } else {
+      prompt('Copy this link:', url);
+    }
+  });
+
+  // Open profile if URL has a hash on load
+  window.addEventListener('load', function(){
+    var hash = location.hash.replace('#','');
+    if(hash){
+      var card = document.querySelector('[data-slug="'+hash+'"]');
+      if(card) openProfile(hash, card);
+    }
+  });
+})();
 if('caches' in window){
   caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
 }
