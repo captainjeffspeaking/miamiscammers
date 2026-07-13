@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miami Scammers — Exposing Fraud for a Safer Miami</title>
+<meta name="description" content="A community-powered database exposing fraudsters across Miami.">
+<!-- Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://miamiscammers.com">
+<meta property="og:title" content="Miami Scammers — Exposing Fraud for a Safer Miami">
+<meta property="og:description" content="A community-powered database exposing fraudsters across Miami. Browse real records and reports so you can spot red flags and protect yourself.">
+<meta property="og:image" content="https://miamiscammers.com/icon-512.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Miami Scammers — Exposing Fraud for a Safer Miami">
+<meta name="twitter:description" content="A community-powered database exposing fraudsters across Miami. Browse real records and reports so you can spot red flags and protect yourself.">
+<meta name="twitter:image" content="https://miamiscammers.com/icon-512.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#00c9a7">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Miami Scammers">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#080808;--card:#111;--border:#1e1e1e;--accent:#00c9a7;--red:#ff3b3b;--text:#f0f0f0;--muted:#777;--sub:#aaa}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(8,8,8,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1000px;margin:0 auto;padding:0 24px;height:62px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:17px;display:flex;align-items:center;gap:8px}
+.logo-dot{width:10px;height:10px;background:var(--accent);border-radius:50%;display:inline-block}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:14px;color:var(--sub);font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.on{color:var(--text)}
+.nav-btn{background:var(--accent);color:#000;border:none;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;transition:opacity .2s}
+.nav-btn:hover{opacity:.85}
+
+/* HERO */
+.hero{min-height:520px;display:flex;align-items:flex-end;padding-top:62px;background:linear-gradient(135deg,#0a0a0a 0%,#0d1a17 50%,#080808 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;left:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,201,167,.08) 0%,transparent 70%);pointer-events:none}
+.hero-content{position:relative;z-index:1;padding:60px 24px 64px;max-width:1000px;margin:0 auto;width:100%}
+.tag{display:inline-flex;align-items:center;gap:6px;background:rgba(0,201,167,.1);border:1px solid rgba(0,201,167,.2);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:18px}
+.tag::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%}
+.hero h1{font-size:clamp(34px,6vw,62px);font-weight:800;line-height:1.1;letter-spacing:-1.5px;margin-bottom:18px;max-width:600px}
+.hero p{font-size:16px;color:var(--sub);max-width:500px;margin-bottom:30px;line-height:1.7}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:14px;padding:12px 22px;border-radius:9px;cursor:pointer;border:none;transition:all .2s}
+.btn-a{background:var(--accent);color:#000}
+.btn-a:hover{opacity:.85;transform:translateY(-1px)}
+.btn-b{background:transparent;color:var(--text);border:1px solid var(--border)}
+.btn-b:hover{border-color:#444;background:rgba(255,255,255,.04)}
+
+/* STATS */
+.stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 24px}
+.stats-row{max-width:1000px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.stat-num{font-size:22px;font-weight:800;color:var(--accent)}
+.stat-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+
+/* SEARCH */
+.search-box{margin-bottom:22px}
+.search-input{width:100%;background:#0a0a0a;border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:inherit;font-size:14px;padding:11px 16px;outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none}
+.search-input:focus{border-color:var(--accent)}
+.search-input::placeholder{color:var(--muted)}
+.search-input::-webkit-search-decoration,.search-input::-webkit-search-cancel-button,.search-input::-webkit-search-results-button,.search-input::-webkit-search-results-decoration{display:none;-webkit-appearance:none}
+.no-results{text-align:center;padding:48px 0;color:var(--muted);font-size:14px;display:none}
+
+/* FEED */
+.feed{padding:56px 0}
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:14px}
+.sec-title{font-size:26px;font-weight:800;letter-spacing:-.4px}
+.sec-title span{color:var(--accent)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.f-btn{background:var(--card);border:1px solid var(--border);color:var(--sub);padding:6px 14px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s}
+.f-btn:hover,.f-btn.on{background:var(--accent);border-color:var(--accent);color:#000}
+
+/* REPORT CARD */
+.grid{display:grid;gap:18px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .2s,transform .2s}
+.card:hover{border-color:#2e2e2e;transform:translateY(-2px)}
+.card-top{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 0}
+.rpt-id{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.badge{display:inline-flex;align-items:center;font-size:10px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.06em}
+.badge-v{background:rgba(0,201,167,.1);color:var(--accent);border:1px solid rgba(0,201,167,.2)}
+.badge-r{background:rgba(255,59,59,.08);color:var(--red);border:1px solid rgba(255,59,59,.18)}
+.card-body{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:18px}
+.photo{width:130px;height:190px;object-fit:cover;object-position:top;border-radius:9px;border:2px solid var(--border);cursor:pointer;transition:opacity .2s}
+.photo:hover{opacity:.85}
+.lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.95);flex-direction:column;align-items:center;justify-content:center;padding:20px;gap:16px}
+.lightbox.open{display:flex}
+.lightbox-img{max-width:100%;max-height:78vh;border-radius:10px;object-fit:contain}
+.lightbox-close{background:rgba(255,255,255,.13);border:2px solid rgba(255,255,255,.18);color:#fff;font-size:24px;width:54px;height:54px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;transition:background .2s;flex-shrink:0}
+.lightbox-close:hover{background:rgba(255,255,255,.28)}
+.photo-ph{width:130px;height:190px;border-radius:9px;border:2px dashed var(--border);display:flex;align-items:center;justify-content:center;background:#0f0f0f;font-size:38px;flex-shrink:0}
+.rpt-name{font-size:20px;font-weight:800;letter-spacing:-.3px;margin-bottom:6px}
+.meta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:12px}
+.meta-i{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:4px}
+.type-tag{display:inline-block;background:rgba(255,59,59,.07);color:var(--red);border:1px solid rgba(255,59,59,.15);font-size:10px;font-weight:700;padding:3px 9px;border-radius:6px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+.desc{font-size:13px;color:var(--sub);line-height:1.7}
+
+/* RECORD */
+.record{margin:0 18px 18px;border:1px solid var(--border);border-radius:9px;overflow:hidden}
+.record-head{display:flex;align-items:center;justify-content:space-between;padding:9px 14px;background:rgba(255,59,59,.05);border-bottom:1px solid var(--border)}
+.record-title{font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.07em}
+.record-src{font-size:11px;color:var(--muted)}
+.record-ph{padding:16px;text-align:center;color:var(--muted);font-size:13px}
+.record img{width:100%}
+
+/* CARD FOOTER */
+.card-foot{display:flex;align-items:center;justify-content:space-between;padding:11px 18px;border-top:1px solid var(--border);flex-wrap:wrap;gap:8px}
+.foot-date{font-size:12px;color:var(--muted)}
+.foot-acts{display:flex;gap:8px}
+.act-btn{display:flex;align-items:center;gap:4px;font-size:12px;font-weight:500;color:var(--muted);background:transparent;border:1px solid var(--border);padding:4px 11px;border-radius:6px;cursor:pointer;transition:all .2s}
+.act-btn:hover{border-color:#444;color:var(--text)}
+
+/* CTA */
+.cta-box{background:linear-gradient(135deg,rgba(0,201,167,.07),rgba(0,201,167,.02));border:1px solid rgba(0,201,167,.13);border-radius:14px;padding:44px 36px;text-align:center;margin:28px 0 56px}
+.cta-box h2{font-size:26px;font-weight:800;letter-spacing:-.4px;margin-bottom:8px}
+.cta-box p{color:var(--sub);margin-bottom:24px}
+
+/* FORM PAGE */
+.page-top{padding:110px 24px 44px;background:linear-gradient(to bottom,#0d0d0d,var(--bg));border-bottom:1px solid var(--border)}
+.page-top h1{font-size:clamp(26px,4vw,42px);font-weight:800;letter-spacing:-1px;margin-bottom:8px}
+.page-top p{color:var(--sub);font-size:15px;max-width:480px}
+.form-wrap{padding:44px 0 72px}
+.form-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:36px;max-width:680px;margin:0 auto}
+.f-sec{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:18px;padding-bottom:11px;border-bottom:1px solid var(--border)}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
+.f-grp{margin-bottom:18px}
+label{display:block;font-size:12px;font-weight:600;color:var(--sub);margin-bottom:6px}
+label .req{color:var(--red)}
+input[type=text],input[type=email],select,textarea{width:100%;background:#0a0a0a;border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:13px;padding:10px 13px;outline:none;transition:border-color .2s;-webkit-appearance:none}
+input:focus,select:focus,textarea:focus{border-color:var(--accent)}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23777' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;padding-right:32px}
+select option{background:#111}
+textarea{resize:vertical;min-height:110px}
+.upload-z{border:2px dashed var(--border);border-radius:9px;padding:28px;text-align:center;cursor:pointer;transition:all .2s;position:relative}
+.upload-z:hover{border-color:var(--accent);background:rgba(0,201,167,.02)}
+.upload-z input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.u-icon{font-size:26px;margin-bottom:6px}
+.u-lbl{font-size:13px;font-weight:600;color:var(--sub);margin-bottom:3px}
+.u-hint{font-size:11px;color:var(--muted)}
+.disc{background:rgba(255,59,59,.05);border:1px solid rgba(255,59,59,.13);border-radius:9px;padding:14px 18px;margin:20px 0}
+.disc p{font-size:12px;color:var(--sub);line-height:1.6}
+.chk-g{display:flex;align-items:flex-start;gap:10px;margin-bottom:13px}
+.chk-g input{width:16px;height:16px;flex-shrink:0;margin-top:2px;accent-color:var(--accent);cursor:pointer}
+.chk-g label{margin:0;font-size:12px;color:var(--sub);cursor:pointer}
+.sub-btn{width:100%;background:var(--accent);color:#000;border:none;border-radius:9px;font-size:14px;font-weight:700;padding:13px;cursor:pointer;transition:all .2s;margin-top:6px}
+.sub-btn:hover{opacity:.85;transform:translateY(-1px)}
+hr.div{border:none;border-top:1px solid var(--border);margin:28px 0}
+
+/* ABOUT */
+.about-wrap{max-width:680px;margin:0 auto;padding:44px 0 72px}
+.a-block{margin-bottom:36px}
+.a-block h2{font-size:20px;font-weight:800;margin-bottom:10px;letter-spacing:-.3px}
+.a-block p{color:var(--sub);line-height:1.8;font-size:14px;margin-bottom:10px}
+.a-block ul{padding-left:18px;color:var(--sub);font-size:14px;line-height:1.9}
+.faq{border:1px solid var(--border);border-radius:9px;padding:18px 20px;margin-bottom:10px;background:var(--card)}
+.faq-q{font-size:14px;font-weight:700;margin-bottom:6px}
+.faq-a{font-size:13px;color:var(--sub);line-height:1.7}
+
+/* IOS INSTALL BANNER */
+.ios-banner{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:999;width:calc(100% - 32px);max-width:420px;background:rgba(20,20,20,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:14px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 40px rgba(0,0,0,.6);animation:slideUp .4s cubic-bezier(.16,1,.3,1)}
+@keyframes slideUp{from{opacity:0;transform:translateX(-50%) translateY(20px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.ios-banner.hidden{display:none}
+.ios-banner-icon{width:44px;height:44px;background:#0d0d0d;border:1px solid rgba(0,201,167,.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.ios-banner-text{flex:1;min-width:0}
+.ios-banner-title{font-size:13px;font-weight:700;color:#f0f0f0;margin-bottom:2px}
+.ios-banner-sub{font-size:11px;color:#777;line-height:1.4}
+.ios-banner-sub span{color:var(--accent)}
+.ios-banner-close{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.08);border:none;color:#777;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
+.ios-banner-close:hover{background:rgba(255,255,255,.15);color:#f0f0f0}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:28px 24px}
+.foot-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.foot-logo{font-weight:800;font-size:14px;display:flex;align-items:center;gap:7px}
+.foot-links{display:flex;gap:20px}
+.foot-links a{font-size:12px;color:var(--muted);transition:color .2s}
+.foot-links a:hover{color:var(--text)}
+.foot-copy{font-size:11px;color:var(--muted)}
+
+/* PAGES */
+.page{display:none}
+.page.active{display:block}
+
+/* SUCCESS */
+.success{display:none;text-align:center;padding:36px 20px}
+.success h2{font-size:20px;font-weight:800;margin-bottom:8px}
+.success p{color:var(--sub);margin-bottom:22px;font-size:14px}
+
+/* RESPONSIVE */
+@media(max-width:680px){
+  #nl-home,#nl-submit{display:none}
+  .nav-btn{display:none}
+  .logo{font-size:14px}
+  .card-body{display:grid;grid-template-columns:80px 1fr;gap:10px;padding:14px}
+  .card-body>span{align-self:start}
+  .photo{width:80px;height:105px;object-fit:cover;object-position:center top}
+  .photo-ph{width:80px;height:105px}
+  .desc{margin-left:calc(-90px);width:calc(100% + 90px);padding-top:10px}
+  .rpt-name{font-size:16px}
+  .f-row{grid-template-columns:1fr}
+  .form-card{padding:20px 16px}
+  .stats-row{gap:20px}
+  .foot-inner{flex-direction:column;text-align:center}
+  .cta-box{padding:28px 18px}
+}
+</style>
+<!-- OneSignal Push Notifications -->
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "5fabeeff-33c6-4d3f-aca2-1715819c7dac",
+      safari_web_id: "web.onesignal.auto.4ddec2dc-5c48-40c7-bde8-da7159bee241",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo" onclick="show('home')" style="cursor:pointer"><span class="logo-dot"></span> Miami Scammers</div>
+    <div class="nav-links">
+      <a href="#" onclick="show('home')" class="on" id="nl-home">Reports</a>
+      <a href="#" onclick="show('submit')" id="nl-submit">Submit Report</a>
+      <a href="#" onclick="show('about')" id="nl-about">About</a>
+    </div>
+    <button class="nav-btn" onclick="show('submit')">+ Submit a Report</button>
+  </div>
+</nav>
+
+<!-- HOME PAGE -->
+<div class="page active" id="page-home">
+
+  <div class="hero">
+    <div class="hero-content">
+      <div class="tag">Miami, FL</div>
+      <h1>Exposing Fraud<br>for a Safer Miami.</h1>
+      <p>A community-powered database exposing fraudsters across Miami. Browse real records and reports so you can spot red flags and protect your money.</p>
+      <div class="hero-btns">
+        <button class="btn btn-a" onclick="show('submit')">+ Submit a Report</button>
+        <a href="#feed" class="btn btn-b">Browse Reports</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num" id="count">—</div><div class="stat-lbl">Reports Filed</div></div>
+      <div class="stat"><div class="stat-num">Miami</div><div class="stat-lbl">Primary City</div></div>
+      <div class="stat"><div class="stat-num">Public</div><div class="stat-lbl">Records Only</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-lbl">Reviewed</div></div>
+    </div>
+  </div>
+
+  <section class="feed" id="feed">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="sec-title">Latest <span>Reports</span></h2>
+        <div class="filters">
+          <button class="f-btn on" onclick="filter('all',this)">All</button>
+          <button class="f-btn" onclick="filter('financial',this)">Financial</button>
+          <button class="f-btn" onclick="filter('romance',this)">Romance</button>
+          <button class="f-btn" onclick="filter('business',this)">Business</button>
+          <button class="f-btn" onclick="filter('rental',this)">Rental</button>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <input class="search-input" type="text" id="searchInput" placeholder="Search by name…" oninput="searchReports(this.value)" autocomplete="off" autocorrect="off" spellcheck="false">
+      </div>
+      <div class="no-results" id="noResults">No reports match your search.</div>
+
+      <div class="grid" id="grid">
+
+        <!-- REPORT #001 — Daniel Sharkey -->
+        <article class="card" data-cat="business">
+          <div class="card-top">
+            <span class="rpt-id">Report #001</span>
+            <span class="badge badge-v">✓ Verified</span>
+          </div>
+          <div class="card-body">
+            <span onclick="openLightbox('daniel sharkey miami - Google Search.png')" style="cursor:pointer"><img class="photo" src="daniel sharkey miami - Google Search.png" alt="Daniel Sharkey"></span>
+            <div>
+              <div class="rpt-name">Daniel Sharkey</div>
+              <div class="meta">
+                <span class="meta-i">📍 Miami, FL</span>
+                <span class="meta-i">🗓 2026</span>
+              </div>
+              <div class="type-tag">Business / Contract Fraud</div>
+              <p class="desc">Breached a $10,000 contract after being hired to produce an event for a Miami-based company. Cancelled the event two days prior without notice or refund. Victim reports the event never took place and funds were not returned.</p>
+            </div>
+          </div>
+          <div class="record">
+            <div class="record-head">
+              <span class="record-title">⚠ Criminal &amp; Traffic Records</span>
+              <span class="record-src">Source: BeenVerified.com</span>
+            </div>
+            <div class="record-ph" style="padding:18px 16px;text-align:left;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#00c9a7;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">72 Criminal or Traffic Records Found</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <span style="color:#00c9a7;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">0 Bankruptcies Found</span>
+              </div>
+              <p style="font-size:11px;color:#555;line-height:1.5;">Data sourced from publicly available records via BeenVerified.com. Miami Scammers does not guarantee accuracy of third-party record data.</p>
+            </div>
+          </div>
+          <div class="card-foot">
+            <span class="foot-date">Filed May 2026</span>
+            <div class="foot-acts">
+              <button class="act-btn" onclick="alert('Flagged for review. Thank you.')">⚑ Flag</button>
+              <button class="act-btn" onclick="copyLink()">↗ Share</button>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- REPORT #002 — Paula Rosello Mateu -->
+        <article class="card" data-cat="rental">
+          <div class="card-top">
+            <span class="rpt-id">Report #002</span>
+            <span class="badge badge-v">✓ Verified</span>
+          </div>
+          <div class="card-body">
+            <span onclick="openLightbox('paula.png')" style="cursor:pointer"><img class="photo" src="paula.png" alt="Paula Rosello Mateu"></span>
+            <div>
+              <div class="rpt-name">Paula Rosello Mateu</div>
+              <div class="meta">
+                <span class="meta-i">📍 Miami Beach, FL</span>
+                <span class="meta-i">🗓 2025–2026</span>
+              </div>
+              <div class="type-tag">Rental / Venue Fraud</div>
+              <p class="desc">Spanish national and tennis player who fraudulently represented a Miami Beach villa as belonging to her family. Signed a venue contract with a Miami-based company for a paid event, collected a deposit to secure the property, then disappeared — deactivating her Instagram, blocking the victim on WhatsApp, and cutting off all contact. Investigation revealed the villa was never her family's property.</p>
+            </div>
+          </div>
+          <div class="record">
+            <div class="record-head">
+              <span class="record-title">⚠ Evidence on File</span>
+              <span class="record-src">Victim-Submitted</span>
+            </div>
+            <div class="record-ph" style="padding:18px 16px;text-align:left;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#00c9a7;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Signed Venue Contract on File</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#00c9a7;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Deposit Payment Evidence Verified</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <span style="color:#00c9a7;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Victim Blocked After Payment — Instagram Deactivated</span>
+              </div>
+              <p style="font-size:11px;color:#555;line-height:1.5;">Evidence reviewed by Miami Scammers. Report published based on verified documentation provided by the affected party.</p>
+            </div>
+          </div>
+          <div class="card-foot">
+            <span class="foot-date">Filed May 2026</span>
+            <div class="foot-acts">
+              <button class="act-btn" onclick="alert('Flagged for review. Thank you.')">⚑ Flag</button>
+              <button class="act-btn" onclick="copyLink()">↗ Share</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- REPORT #004 — Nathan Tyler Guy -->
+        <article class="card" data-cat="rental">
+          <div class="card-top">
+            <span class="rpt-id">Report #004</span>
+            <span class="badge badge-v">✓ Verified</span>
+          </div>
+          <div class="card-body">
+            <span onclick="openLightbox('nathan.png')" style="cursor:pointer"><img class="photo" src="nathan.png" alt="Nathan Tyler Guy"></span>
+            <div>
+              <div class="rpt-name">Nathan Tyler Guy</div>
+              <div class="meta">
+                <span class="meta-i">📍 Miami Edgewater, FL</span>
+                <span class="meta-i">🗓 2025–2026</span>
+              </div>
+              <div class="type-tag">Rental / Real Estate Fraud</div>
+              <p class="desc">Posed as a landlord on Facebook Marketplace, listing fake rental properties and collecting deposits from victims. Used FaceTime-style virtual showings and phony lease agreements to appear legitimate. At least 7 victims lost a combined $50,000+, with individual losses ranging from $1,000 to $35,000. Arrested April 2026 and charged with organized fraud, second-degree grand theft, and six counts of third-degree grand theft.</p>
+            </div>
+          </div>
+          <div class="record">
+            <div class="record-head">
+              <span class="record-title">⚠ Criminal Record</span>
+              <span class="record-src">Miami Police / Public Records</span>
+            </div>
+            <div class="record-ph" style="padding:18px 16px;text-align:left;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Arrested April 2026 — Awaiting Trial</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Charged: Organized Fraud $50,000+</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">6 Counts of Grand Theft</span>
+              </div>
+              <p style="font-size:11px;color:#555;line-height:1.5;">Source: CBS Miami, Local10, Hoodline. Charges reflect arrest; conviction pending trial.</p>
+            </div>
+          </div>
+          <div class="card-foot">
+            <span class="foot-date">Filed May 2026</span>
+            <div class="foot-acts">
+              <button class="act-btn" onclick="alert('Flagged for review. Thank you.')">⚑ Flag</button>
+              <button class="act-btn" onclick="copyLink()">↗ Share</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- REPORT #003 — Stephanie Devilliers -->
+        <article class="card" data-cat="financial">
+          <div class="card-top">
+            <span class="rpt-id">Report #003</span>
+            <span class="badge badge-v">✓ Verified</span>
+          </div>
+          <div class="card-body">
+            <span onclick="openLightbox('stephanie.jpg')" style="cursor:pointer"><img class="photo" src="stephanie.jpg" alt="Stephanie Devilliers"></span>
+            <div>
+              <div class="rpt-name">Stephanie Devilliers</div>
+              <div class="meta">
+                <span class="meta-i">📍 Miami, FL</span>
+                <span class="meta-i">🗓 2025–2026</span>
+              </div>
+              <div class="type-tag">Financial / Investment Fraud</div>
+              <p class="desc">Introduced a victim to her purported "boss" — later identified as a disbarred attorney — to invest in a Miami startup. The investment turned out to be a fraudulent scheme. The disbarred lawyer has been linked to the embezzlement of up to $282 million. Stephanie acted as the recruiter and point of contact throughout the scheme.</p>
+            </div>
+          </div>
+          <div class="record">
+            <div class="record-head">
+              <span class="record-title">⚠ Criminal Record</span>
+              <span class="record-src">Public Records</span>
+            </div>
+            <div class="record-ph" style="padding:18px 16px;text-align:left;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">3 Criminal Arrests on Record</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Charges: Assault, Assault with a Deadly Weapon</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Parole Violations on Record</span>
+              </div>
+              <p style="font-size:11px;color:#555;line-height:1.5;">Criminal records sourced from publicly available court records. Investment fraud evidence reviewed and verified by Miami Scammers.</p>
+            </div>
+          </div>
+          <div class="card-foot">
+            <span class="foot-date">Filed May 2026</span>
+            <div class="foot-acts">
+              <button class="act-btn" onclick="alert('Flagged for review. Thank you.')">⚑ Flag</button>
+              <button class="act-btn" onclick="copyLink()">↗ Share</button>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- REPORT #005 — Sismai Roman -->
+        <article class="card" data-cat="business">
+          <div class="card-top">
+            <span class="rpt-id">Report #005</span>
+            <span class="badge badge-v">✓ Verified</span>
+          </div>
+          <div class="card-body">
+            <span onclick="openLightbox('sismai.jpg')" style="cursor:pointer"><img class="photo" src="sismai.jpg" alt="Sismai Roman"></span>
+            <div>
+              <div class="rpt-name">Sismai Roman</div>
+              <div class="meta">
+                <span class="meta-i">📍 Miami, FL</span>
+                <span class="meta-i">🗓 2024–2026</span>
+              </div>
+              <div class="type-tag">Business / Financial Fraud</div>
+              <p class="desc">Miami-based individual with a documented history of criminal and traffic violations, multiple fraud cases on record, and named in multiple civil lawsuits. A Yelp reviewer flagged unreliable business practices and missing funds, strongly cautioning others against engaging with her for any financial or business dealings.</p>
+            </div>
+          </div>
+          <div class="record">
+            <div class="record-head">
+              <span class="record-title">⚠ Criminal &amp; Civil Records</span>
+              <span class="record-src">Public Records</span>
+            </div>
+            <div class="record-ph" style="padding:18px 16px;text-align:left;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">8 Criminal / Traffic Violations on Record</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Multiple Fraud Cases on Record</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Named in Multiple Civil Lawsuits</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Yelp Review: Missing Funds &amp; Unreliable Business Practices</span>
+              </div>
+              <p style="font-size:11px;color:#555;line-height:1.5;">Records sourced from publicly available court and civil records. Yelp review submitted by independent third party.</p>
+            </div>
+          </div>
+          <div class="card-foot">
+            <span class="foot-date">Filed May 2026</span>
+            <div class="foot-acts">
+              <button class="act-btn" onclick="alert('Flagged for review. Thank you.')">⚑ Flag</button>
+              <button class="act-btn" onclick="copyLink()">↗ Share</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- REPORT #006 — Anna Telichenko -->
+        <article class="card" data-cat="romance">
+          <div class="card-top">
+            <span class="rpt-id">Report #006</span>
+            <span class="badge badge-v">✓ Verified</span>
+          </div>
+          <div class="card-body">
+            <span onclick="openLightbox('Anna Telichenko .jpg')" style="cursor:pointer"><img class="photo" src="Anna Telichenko .jpg" alt="Anna Telichenko"></span>
+            <div>
+              <div class="rpt-name">Anna Telichenko</div>
+              <div class="meta">
+                <span class="meta-i">📍 North Miami, FL</span>
+                <span class="meta-i">🗓 2025–2026</span>
+                <span class="meta-i">🇺🇦 Originally from Ukraine</span>
+                <span class="meta-i">Age 23</span>
+              </div>
+              <div class="type-tag">Romance Fraud / Extortion</div>
+              <p class="desc">Faked a pregnancy to extort $3,000 from a Miami man, threatening to get an abortion unless he paid. She sustained the lie for over a month before the victim investigated and uncovered the deception. Evidence confirms no pregnancy existed. She used emotional manipulation and financial coercion as her primary tools.</p>
+            </div>
+          </div>
+          <div class="record">
+            <div class="record-head">
+              <span class="record-title">⚠ Fraud &amp; Extortion</span>
+              <span class="record-src">Victim-Submitted Evidence</span>
+            </div>
+            <div class="record-ph" style="padding:18px 16px;text-align:left;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Faked Pregnancy to Extort $3,000</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Sustained Deception for Over One Month</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Pregnancy Confirmed Fabricated via Investigation</span>
+              </div>
+              <p style="font-size:11px;color:#555;line-height:1.5;">Evidence reviewed and verified by Miami Scammers. Victim provided documentation confirming the fraud.</p>
+            </div>
+          </div>
+          <div class="card-foot">
+            <span class="foot-date">Filed May 2026</span>
+            <div class="foot-acts">
+              <button class="act-btn" onclick="alert('Flagged for review. Thank you.')">⚑ Flag</button>
+              <button class="act-btn" onclick="copyLink()">↗ Share</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- REPORT #007 — Natasha Garden -->
+        <article class="card" data-cat="romance">
+          <div class="card-top">
+            <span class="rpt-id">Report #007</span>
+            <span class="badge badge-v">✓ Verified</span>
+          </div>
+          <div class="card-body">
+            <span onclick="openLightbox('natashagarden.jpg')" style="cursor:pointer"><img class="photo" src="natashagarden.jpg" alt="Natasha Garden"></span>
+            <div>
+              <div class="rpt-name">Natasha Garden</div>
+              <div class="meta">
+                <span class="meta-i">📍 Miami, FL</span>
+                <span class="meta-i">🗓 2025–2026</span>
+              </div>
+              <div class="type-tag">Romance Fraud / Extortion</div>
+              <p class="desc">Faked a pregnancy to extort $300 from a Miami man. Provided a pregnancy test belonging to someone else as fabricated proof. Evidence of the deception was submitted and reviewed. A pattern consistent with deliberate financial manipulation.</p>
+            </div>
+          </div>
+          <div class="record">
+            <div class="record-head">
+              <span class="record-title">⚠ Criminal &amp; Fraud Records</span>
+              <span class="record-src">BeenVerified.com</span>
+            </div>
+            <div class="record-ph" style="padding:18px 16px;text-align:left;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">3 Criminal / Traffic Violations on Record</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Fraudulent Pregnancy Test Submitted as Evidence</span>
+              </div>
+              <p style="font-size:11px;color:#555;line-height:1.5;">Criminal records sourced from BeenVerified.com. Fraud evidence reviewed and verified by Miami Scammers.</p>
+            </div>
+          </div>
+          <div class="card-foot">
+            <span class="foot-date">Filed May 2026</span>
+            <div class="foot-acts">
+              <button class="act-btn" onclick="alert('Flagged for review. Thank you.')">⚑ Flag</button>
+              <button class="act-btn" onclick="copyLink()">↗ Share</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- REPORT #008 — Boniface Ogunti -->
+        <article class="card" data-cat="fraud">
+          <div class="card-top">
+            <span class="rpt-id">Report #008</span>
+            <span class="badge badge-v">✓ Verified</span>
+          </div>
+          <div class="card-body">
+            <span onclick="openLightbox('boniface.jpg')" style="cursor:pointer"><img class="photo" src="boniface.jpg" alt="Boniface Ogunti"></span>
+            <div>
+              <div class="rpt-name">Boniface Ogunti</div>
+              <div class="meta">
+                <span class="meta-i">📍 Miami, FL</span>
+                <span class="meta-i">🗓 Multiple Years</span>
+              </div>
+              <div class="type-tag">Money / Business Fraud</div>
+              <p class="desc">Multiple reports of money and business scams in the Miami area. Public records reveal 11 criminal and traffic violations including disorderly conduct, battery-family violence, theft by conversion (felony), and multiple DWIs. A documented pattern of predatory and illegal behavior.</p>
+            </div>
+          </div>
+          <div class="record">
+            <div class="record-head">
+              <span class="record-title">⚠ Criminal &amp; Fraud Records</span>
+              <span class="record-src">Public Records</span>
+            </div>
+            <div class="record-ph" style="padding:18px 16px;text-align:left;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">11 Criminal / Traffic Records on File</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Theft by Conversion — Felony</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Battery — Family Violence</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Disorderly Conduct</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Multiple DWIs on Record</span>
+              </div>
+              <p style="font-size:11px;color:#555;line-height:1.5;">Criminal records sourced from public records. Multiple community reports of money and business fraud submitted independently.</p>
+            </div>
+          </div>
+          <div class="card-foot">
+            <span class="foot-date">Filed May 2026</span>
+            <div class="foot-acts">
+              <button class="act-btn" onclick="alert('Flagged for review. Thank you.')">⚑ Flag</button>
+              <button class="act-btn" onclick="copyLink()">↗ Share</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- REPORT #009 — Kim Vallejo -->
+        <article class="card" data-cat="romance">
+          <div class="card-top">
+            <span class="rpt-id">Report #009</span>
+            <span class="badge badge-v">✓ Verified</span>
+          </div>
+          <div class="card-body">
+            <span onclick="openLightbox('kim.png')" style="cursor:pointer"><img class="photo" src="kim.png" alt="Kim Vallejo"></span>
+            <div>
+              <div class="rpt-name">Kim Vallejo</div>
+              <div class="meta">
+                <span class="meta-i">📍 Miami, FL</span>
+                <span class="meta-i">🗓 Multiple Years</span>
+              </div>
+              <div class="type-tag">Romance Scam / Theft</div>
+              <p class="desc">Multiple reports of Kim Vallejo scamming men for free flights. She feigns romantic interest, convinces men to purchase her airfare, then spends the trip with other people upon arrival. Public records also confirm a shoplifting conviction. A documented pattern of manipulation and theft.</p>
+            </div>
+          </div>
+          <div class="record">
+            <div class="record-head">
+              <span class="record-title">⚠ Criminal &amp; Fraud Records</span>
+              <span class="record-src">Public Records / Community Reports</span>
+            </div>
+            <div class="record-ph" style="padding:18px 16px;text-align:left;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Shoplifting — Convicted (Public Record)</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Flight Scam — Fakes Romantic Interest for Free Travel</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Multiple Victims — Reports Submitted with Evidence</span>
+              </div>
+              <p style="font-size:11px;color:#555;line-height:1.5;">Shoplifting conviction sourced from public records. Flight scam reports submitted independently by multiple victims with supporting evidence.</p>
+            </div>
+          </div>
+          <div class="card-foot">
+            <span class="foot-date">Filed May 2026</span>
+            <div class="foot-acts">
+              <button class="act-btn" onclick="alert('Flagged for review. Thank you.')">⚑ Flag</button>
+              <button class="act-btn" onclick="copyLink()">↗ Share</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- REPORT #010 — Rob Ellis -->
+        <article class="card" data-cat="fraud">
+          <div class="card-top">
+            <span class="rpt-id">Report #010</span>
+            <span class="badge badge-v">✓ Verified</span>
+          </div>
+          <div class="card-body">
+            <span onclick="openLightbox('robellis.png')" style="cursor:pointer"><img class="photo" src="robellis.png" alt="Rob Ellis"></span>
+            <div>
+              <div class="rpt-name">Rob Ellis</div>
+              <div class="meta">
+                <span class="meta-i">📍 Miami, FL (from Ohio)</span>
+                <span class="meta-i">🗓 Multiple Years</span>
+              </div>
+              <div class="type-tag">Real Estate Fraud / Misrepresentation</div>
+              <p class="desc">Rob Ellis operates in Miami as a realtor and small project developer. Reports allege misrepresentation, failure to disclose material facts, misleading sales practices, and failure to act in the client's best interest. Public records reveal a bankruptcy with multiple fraud-related dischargeability claims, multiple traffic violations, and a lawsuit filed against him in Columbus, Ohio for fraud.</p>
+            </div>
+          </div>
+          <div class="record">
+            <div class="record-head">
+              <span class="record-title">⚠ Legal &amp; Court Records</span>
+              <span class="record-src">Federal Court / Public Records</span>
+            </div>
+            <div class="record-ph" style="padding:18px 16px;text-align:left;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Bankruptcy — §523(a)(2): False Pretenses, False Representation &amp; Actual Fraud</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Bankruptcy — §523(a)(4): Fraud as Fiduciary, Embezzlement &amp; Larceny</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Bankruptcy — §523(a)(6): Willful &amp; Malicious Injury</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Sued in Columbus, Ohio for Fraud</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <span style="color:#ff3b3b;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">Multiple Traffic Violations on Record</span>
+              </div>
+              <p style="font-size:11px;color:#555;line-height:1.5;">Bankruptcy and court records sourced from federal and public court filings. Community reports allege negligence, breach of fiduciary duty, overpromising, and lack of due diligence in real estate transactions.</p>
+            </div>
+          </div>
+          <div class="card-foot">
+            <span class="foot-date">Filed June 2026</span>
+            <div class="foot-acts">
+              <button class="act-btn" onclick="alert('Flagged for review. Thank you.')">⚑ Flag</button>
+              <button class="act-btn" onclick="copyLink()">↗ Share</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="cta-box">
+        <h2>Know a Scammer in Miami?</h2>
+        <p>Help protect your community. Submit a verified report and we'll review it before it goes live.</p>
+        <button class="btn btn-a" onclick="show('submit')">Submit a Report →</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- SUBMIT PAGE -->
+<div class="page" id="page-submit">
+  <div class="page-top">
+    <div class="wrap">
+      <div class="tag" style="margin-bottom:14px">Confidential Submission</div>
+      <h1>Submit a Report</h1>
+      <p>All reports are reviewed before being published. Your contact info is never made public.</p>
+    </div>
+  </div>
+  <div class="form-wrap">
+    <div class="wrap">
+      <div class="form-card">
+        <form id="rForm" name="submit-report" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="submit-report">
+          <p style="display:none"><input name="bot-field"></p>
+
+          <div class="f-sec">Your Information — never published</div>
+          <div class="f-row">
+            <div>
+              <label>Your Name <span style="color:var(--muted)">(optional)</span></label>
+              <input type="text" name="reporter_name" placeholder="Anonymous">
+            </div>
+            <div>
+              <label>Your Email <span class="req">*</span></label>
+              <input type="email" name="reporter_email" placeholder="your@email.com" required>
+            </div>
+          </div>
+
+          <hr class="div">
+          <div class="f-sec">Person Being Reported</div>
+
+          <div class="f-row">
+            <div>
+              <label>First Name <span class="req">*</span></label>
+              <input type="text" name="first_name" placeholder="First name" required>
+            </div>
+            <div>
+              <label>Last Name <span class="req">*</span></label>
+              <input type="text" name="last_name" placeholder="Last name" required>
+            </div>
+          </div>
+          <div class="f-row">
+            <div>
+              <label>City / Neighborhood <span class="req">*</span></label>
+              <input type="text" name="city" placeholder="e.g. Brickell, Miami" required>
+            </div>
+            <div>
+              <label>Type of Scam <span class="req">*</span></label>
+              <select name="scam_type" required>
+                <option value="" disabled selected>Select type...</option>
+                <option>Financial / Investment</option>
+                <option>Romance Scam</option>
+                <option>Business / Contractor</option>
+                <option>Rental / Real Estate</option>
+                <option>Online / Marketplace</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="f-grp">
+            <label>Social Media Profiles <span style="color:var(--muted)">(optional)</span></label>
+            <input type="text" name="social" placeholder="Instagram @handle, Facebook name, etc.">
+          </div>
+
+          <hr class="div">
+          <div class="f-sec">What Happened</div>
+
+          <div class="f-grp">
+            <label>When did this occur? <span class="req">*</span></label>
+            <input type="text" name="date" placeholder="e.g. March 2026" required>
+          </div>
+          <div class="f-grp">
+            <label>Description <span class="req">*</span></label>
+            <textarea name="description" placeholder="Describe what happened. Be factual and specific." required></textarea>
+          </div>
+
+          <hr class="div">
+          <div class="f-sec">Evidence</div>
+
+          <div class="f-grp">
+            <label>Subject Photo <span style="color:var(--muted)">(publicly available photos only)</span></label>
+            <div class="upload-z">
+              <input type="file" name="photo" accept="image/*">
+              <div class="u-icon">📷</div>
+              <div class="u-lbl">Upload photo</div>
+              <div class="u-hint">JPG, PNG · Max 10MB</div>
+            </div>
+          </div>
+          <div class="f-grp">
+            <label>Supporting Evidence <span style="color:var(--muted)">(screenshots, receipts, texts)</span></label>
+            <div class="upload-z">
+              <input type="file" name="evidence" accept="image/*,.pdf" multiple>
+              <div class="u-icon">📎</div>
+              <div class="u-lbl">Upload files</div>
+              <div class="u-hint">JPG, PNG, PDF · Multiple OK</div>
+            </div>
+          </div>
+          <div class="f-grp">
+            <label>Public Criminal Record Screenshot</label>
+            <div class="upload-z">
+              <input type="file" name="record" accept="image/*,.pdf">
+              <div class="u-icon">📋</div>
+              <div class="u-lbl">Upload record screenshot</div>
+              <div class="u-hint">Public records only</div>
+            </div>
+          </div>
+
+          <div class="disc">
+            <p><strong>Before submitting:</strong> All information must be factual and verifiable. Reports are reviewed before publishing. False reports are not tolerated.</p>
+          </div>
+
+          <div class="chk-g">
+            <input type="checkbox" id="c1" required>
+            <label for="c1">All information in this report is truthful and based on my direct experience or publicly available records.</label>
+          </div>
+          <div class="chk-g">
+            <input type="checkbox" id="c2" required>
+            <label for="c2">I am not submitting private data such as SSNs, bank accounts, or home addresses.</label>
+          </div>
+          <div class="chk-g">
+            <input type="checkbox" id="c3" required>
+            <label for="c3">I agree to the site guidelines and understand reports are reviewed before being published.</label>
+          </div>
+          <div class="chk-g">
+            <input type="checkbox" id="c4" required>
+            <label for="c4">I understand that MiamiScammers.com is not responsible for the accuracy of submitted information and is not liable for any retaliation, legal action, or consequences resulting from the publication of this report. I submit this report at my own risk.</label>
+          </div>
+
+          <button type="submit" class="sub-btn" id="subBtn">Submit Report for Review →</button>
+          <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:12px">Your email is never published. Reports go through manual review before posting.</p>
+        </form>
+
+        <div class="success" id="successMsg">
+          <div style="font-size:44px;margin-bottom:14px">✅</div>
+          <h2>Report Received</h2>
+          <p>Your submission is under review. We'll reach out if we need more information.</p>
+          <button class="btn btn-a" onclick="show('home')">← Back to Reports</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT PAGE -->
+<div class="page" id="page-about">
+  <div class="page-top">
+    <div class="wrap">
+      <div class="tag" style="margin-bottom:14px">Our Mission</div>
+      <h1>About Miami Scammers</h1>
+      <p>Built by people who got burned. Here to make sure it doesn't happen to you.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="about-wrap">
+      <div class="a-block">
+        <h2>What is this site?</h2>
+        <p>Miami Scammers is a community-powered fraud database focused on South Florida. We publish verified reports about individuals who have scammed or financially harmed people in our community.</p>
+        <p>Every report is reviewed before it goes live. We only publish factual, verifiable information drawn from public records and direct victim accounts.</p>
+      </div>
+      <div class="a-block">
+        <h2>What we publish</h2>
+        <ul>
+          <li>Full name (publicly available)</li>
+          <li>General location / city</li>
+          <li>Brief factual description of what occurred</li>
+          <li>Public criminal record screenshots (court records are public)</li>
+          <li>Publicly available photos</li>
+        </ul>
+      </div>
+      <div class="a-block">
+        <h2>What we do NOT publish</h2>
+        <ul>
+          <li>Home addresses or precise locations</li>
+          <li>Social security numbers or financial account data</li>
+          <li>Unverified accusations without supporting evidence</li>
+          <li>Information about minors</li>
+        </ul>
+      </div>
+      <div class="a-block">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+          <div class="faq-q">Is this legal?</div>
+          <div class="faq-a">Yes. Truth is an absolute defense against defamation. Court records and names are public information. We do not publish false statements or private data.</div>
+        </div>
+        <div class="faq">
+          <div class="faq-q">How do you verify reports?</div>
+          <div class="faq-a">Every submission goes through manual review. We require evidence such as screenshots, receipts, or court records before a report is approved.</div>
+        </div>
+        <div class="faq">
+          <div class="faq-q">Can someone request removal?</div>
+          <div class="faq-a">If a report is proven inaccurate, we will remove or correct it. Documented evidence of inaccuracy is required.</div>
+        </div>
+        <div class="faq">
+          <div class="faq-q">Who runs this site?</div>
+          <div class="faq-a">This site is operated anonymously by Miami community members who have personally experienced fraud. We are not affiliated with any law enforcement agency.</div>
+        </div>
+      </div>
+      <div class="a-block">
+        <h2>Request Removal</h2>
+        <p>If you believe a report about you contains inaccurate or false information, you may submit a removal request. You must provide documented proof that the information is incorrect — reports based on verified public records will not be removed without compelling evidence of inaccuracy.</p>
+        <p style="margin-top:12px;">To submit a removal request, email us at: <a href="mailto:miamiscammers2026@gmail.com" style="color:var(--accent);font-weight:600;">miamiscammers2026@gmail.com</a></p>
+      </div>
+      <div class="a-block">
+        <h2>Legal Disclaimer</h2>
+        <div class="disc">
+          <p>MiamiScammers.com is a community-powered public information resource. All reports are based on publicly available records, submitted evidence, and community tips. While we review submissions for credibility before publishing, we do not guarantee the accuracy of all information. Reports may contain errors or incomplete information. We encourage all visitors to conduct their own independent research before drawing any conclusions. Nothing on this site constitutes legal advice or a definitive finding of guilt. All persons are presumed innocent until proven otherwise in a court of law.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" class="lightbox-img" src="" alt="">
+</div>
+
+<!-- IOS INSTALL BANNER -->
+<div class="ios-banner hidden" id="iosBanner">
+  <div class="ios-banner-icon">🛡️</div>
+  <div class="ios-banner-text">
+    <div class="ios-banner-title">Add Miami Scammers to your Home Screen</div>
+    <div class="ios-banner-sub">Tap <span>Share ↑</span> then <span>"Add to Home Screen"</span></div>
+  </div>
+  <button class="ios-banner-close" onclick="dismissBanner()">✕</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo"><span class="logo-dot"></span> Miami Scammers</div>
+    <div class="foot-links">
+      <a href="#" onclick="show('home')">Reports</a>
+      <a href="#" onclick="show('submit')">Submit</a>
+      <a href="#" onclick="show('about')">About</a>
+    </div>
+    <div style="max-width:700px;margin:16px auto 12px;background:rgba(255,59,59,.05);border:1px solid rgba(255,59,59,.13);border-radius:9px;padding:14px 18px;">
+      <p style="font-size:11px;color:#777;line-height:1.7;text-align:center;">⚖️ <strong style="color:#aaa">Legal Disclaimer:</strong> MiamiScammers.com is a community-powered public information resource. All reports are based on publicly available records and submitted evidence. We do not guarantee the accuracy of all information — errors may exist. Conduct your own research before drawing conclusions. Nothing on this site constitutes legal advice or a definitive finding of guilt. All persons are presumed innocent until proven otherwise in a court of law.</p>
+    </div>
+    <p class="foot-copy">© 2026 MiamiScammers.com · All reports contain publicly available information.</p>
+  </div>
+</footer>
+
+<script>
+function show(p){
+  document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  ['home','submit','about'].forEach(n=>{
+    const el=document.getElementById('nl-'+n);
+    if(el) el.classList.toggle('on',n===p);
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+const cards=document.querySelectorAll('.card');
+const countEl=document.getElementById('count');
+if(countEl) countEl.textContent=cards.length;
+function filter(cat,btn){
+  document.querySelectorAll('.f-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.card').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
+  });
+}
+function searchReports(q){
+  const term=q.toLowerCase().trim();
+  let visible=0;
+  document.querySelectorAll('.card').forEach(c=>{
+    const name=c.querySelector('.rpt-name');
+    const match=!term||(name&&name.textContent.toLowerCase().includes(term));
+    c.style.display=match?'':'none';
+    if(match) visible++;
+  });
+  const nr=document.getElementById('noResults');
+  if(nr) nr.style.display=visible===0?'block':'none';
+}
+function copyLink(){
+  if(navigator.clipboard) navigator.clipboard.writeText(location.href).then(()=>alert('Link copied!'));
+}
+function openLightbox(src){
+  document.getElementById('lightbox-img').src=src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lightbox-img').src='';
+  document.body.style.overflow='';
+}
+const form=document.getElementById('rForm');
+const success=document.getElementById('successMsg');
+const subBtn=document.getElementById('subBtn');
+if(form){
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    subBtn.textContent='Submitting…';
+    subBtn.disabled=true;
+    try{
+      const fd=new FormData(form);
+      fd.append('form-name','submit-report');
+      const r=await fetch('/',{method:'POST',body:fd});
+      if(r.ok){form.style.display='none';success.style.display='block';}
+      else{subBtn.textContent='Failed — Try Again';subBtn.disabled=false;}
+    }catch{subBtn.textContent='Failed — Try Again';subBtn.disabled=false;}
+  });
+}
+</script>
+<script>
+// iOS install banner
+(function(){
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isStandalone = window.navigator.standalone === true;
+  const dismissed = localStorage.getItem('iosBannerDismissed');
+  if(isIOS && !isStandalone && !dismissed){
+    setTimeout(()=>{
+      const b = document.getElementById('iosBanner');
+      if(b) b.classList.remove('hidden');
+    }, 2500);
+  }
+})();
+function dismissBanner(){
+  document.getElementById('iosBanner').classList.add('hidden');
+  localStorage.setItem('iosBannerDismissed','1');
+}
+
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.getRegistrations().then(regs => regs.forEach(r => r.unregister()));
+}
+if('caches' in window){
+  caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+}
+</script>
+</body>
+</html>
