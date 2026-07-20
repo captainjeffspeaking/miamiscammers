@@ -1283,7 +1283,7 @@ if('serviceWorker' in navigator){
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
 
   document.getElementById('modalShareBtn').addEventListener('click', function(){
-    var url = location.origin + location.pathname + '#' + currentSlug;
+    var url = location.origin + '/profiles/' + currentSlug;
     var btn = document.getElementById('modalShareBtn');
     if(navigator.clipboard){
       navigator.clipboard.writeText(url).then(function(){
