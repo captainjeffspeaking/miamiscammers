@@ -214,12 +214,18 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
   .cta-box{padding:28px 18px}
 }
 /* Profile Modal */
-.profile-modal{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:2000;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .2s}
+.profile-modal{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:2000;display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s}
+@media(min-width:600px){.profile-modal{align-items:center;padding:24px}}
 .profile-modal.open{opacity:1;pointer-events:all}
-.profile-modal-box{background:var(--card);border:1px solid var(--border);border-radius:16px;max-width:540px;width:100%;max-height:90vh;overflow-y:auto;position:relative}
-.profile-modal-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.08);border:none;color:var(--text);font-size:18px;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1}
-.profile-modal-close:hover{background:rgba(255,255,255,.15)}
-.profile-modal-share{display:flex;align-items:center;justify-content:center;gap:8px;width:calc(100% - 32px);margin:0 16px 20px;padding:13px;background:var(--accent);color:#000;font-weight:800;font-size:14px;border:none;border-radius:10px;cursor:pointer;letter-spacing:.02em}
+.profile-modal-box{background:var(--card);border:1px solid var(--border);border-radius:20px 20px 0 0;max-width:540px;width:100%;max-height:88vh;display:flex;flex-direction:column}
+@media(min-width:600px){.profile-modal-box{border-radius:16px;max-height:85vh}}
+.profile-modal-header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 10px;flex-shrink:0;border-bottom:1px solid var(--border)}
+.profile-modal-header span{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.profile-modal-close{background:rgba(255,255,255,.08);border:none;color:var(--text);font-size:18px;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.profile-modal-close:hover{background:rgba(255,255,255,.18)}
+.profile-modal-content{overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch}
+.profile-modal-footer{padding:12px 16px 20px;flex-shrink:0;border-top:1px solid var(--border)}
+.profile-modal-share{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;background:var(--accent);color:#000;font-weight:800;font-size:14px;border:none;border-radius:10px;cursor:pointer;letter-spacing:.02em}
 .profile-modal-share:hover{opacity:.88}
 .card[data-slug]{cursor:pointer}
 .card[data-slug]:hover{border-color:#333;transform:translateY(-3px)}
@@ -1240,7 +1246,7 @@ if('serviceWorker' in navigator){
   var modal = document.createElement('div');
   modal.className = 'profile-modal';
   modal.id = 'profileModal';
-  modal.innerHTML = '<div class="profile-modal-box"><button class="profile-modal-close" id="modalClose">✕</button><div id="modalContent"></div><button class="profile-modal-share" id="modalShareBtn">↗ Share This Profile</button></div>';
+  modal.innerHTML = '<div class="profile-modal-box"><div class="profile-modal-header"><span>Profile</span><button class="profile-modal-close" id="modalClose">✕</button></div><div id="modalContent" class="profile-modal-content"></div><div class="profile-modal-footer"><button class="profile-modal-share" id="modalShareBtn">↗ Share This Profile</button></div></div>';
   document.body.appendChild(modal);
 
   var currentSlug = '';
