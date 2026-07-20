@@ -224,9 +224,11 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
 .profile-modal-close{background:rgba(255,255,255,.08);border:none;color:var(--text);font-size:18px;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .profile-modal-close:hover{background:rgba(255,255,255,.18)}
 .profile-modal-content{overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch}
-.profile-modal-footer{padding:12px 16px 20px;flex-shrink:0;border-top:1px solid var(--border)}
-.profile-modal-share{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;background:var(--accent);color:#000;font-weight:800;font-size:14px;border:none;border-radius:10px;cursor:pointer;letter-spacing:.02em}
+.profile-modal-footer{padding:12px 16px 24px;flex-shrink:0;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:10px}
+.profile-modal-share{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:var(--accent);color:#000;font-weight:800;font-size:15px;border:none;border-radius:10px;cursor:pointer;letter-spacing:.02em}
 .profile-modal-share:hover{opacity:.88}
+.profile-modal-back{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:13px;background:rgba(255,255,255,.06);color:var(--text);font-weight:700;font-size:14px;border:1px solid var(--border);border-radius:10px;cursor:pointer}
+.profile-modal-back:hover{background:rgba(255,255,255,.1)}
 .card[data-slug]{cursor:pointer}
 .card[data-slug]:hover{border-color:#333;transform:translateY(-3px)}
 </style>
@@ -1246,7 +1248,7 @@ if('serviceWorker' in navigator){
   var modal = document.createElement('div');
   modal.className = 'profile-modal';
   modal.id = 'profileModal';
-  modal.innerHTML = '<div class="profile-modal-box"><div class="profile-modal-header"><span>Profile</span><button class="profile-modal-close" id="modalClose">✕</button></div><div id="modalContent" class="profile-modal-content"></div><div class="profile-modal-footer"><button class="profile-modal-share" id="modalShareBtn">↗ Share This Profile</button></div></div>';
+  modal.innerHTML = '<div class="profile-modal-box"><div class="profile-modal-header"><span>Profile</span><button class="profile-modal-close" id="modalClose">✕ Close</button></div><div id="modalContent" class="profile-modal-content"></div><div class="profile-modal-footer"><button class="profile-modal-share" id="modalShareBtn">↗ Share This Profile</button><button class="profile-modal-back" id="modalBackBtn">← Back to All Reports</button></div></div>';
   document.body.appendChild(modal);
 
   var currentSlug = '';
@@ -1285,6 +1287,7 @@ if('serviceWorker' in navigator){
   }
 
   document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('modalBackBtn').addEventListener('click', closeModal);
   modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
 
