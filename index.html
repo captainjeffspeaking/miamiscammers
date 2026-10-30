@@ -277,7 +277,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
       <a href="#" onclick="show('home')" class="on" id="nl-home">Reports</a>
       <a href="#" onclick="show('submit')" id="nl-submit">Submit Report</a>
       <a href="#" onclick="show('about')" id="nl-about">About</a>
-      <a href="#" onclick="show('blog')" id="nl-blog">Blog</a>
+      <a href="/blog" id="nl-blog">Blog</a>
     </div>
     <button class="nav-btn" onclick="show('submit')">+ Submit a Report</button>
   </div>
@@ -1276,17 +1276,8 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
   <button class="ios-banner-close" onclick="dismissBanner()">✕</button>
 </div>
 
-<!-- BLOG PAGE -->
-<div class="page" id="page-blog">
-  <div class="blog-hero">
-    <div class="wrap">
-      <div class="tag">Resources</div>
-      <h1>Miami Scammers Blog</h1>
-      <p>Practical guides to help you recognize fraud, protect your money, and stay one step ahead of scammers in South Florida.</p>
-    </div>
-  </div>
-
-  <div class="blog-wrap">
+<!-- BLOG PAGE MOVED TO /blog.html -->
+<div class="page" id="page-blog" style="display:none"><div class="blog-wrap">
     <article class="blog-article">
       <div class="blog-meta">
         <span>📅 October 2026</span>
@@ -1419,7 +1410,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
       <a href="#" onclick="show('home')">Reports</a>
       <a href="#" onclick="show('submit')">Submit</a>
       <a href="#" onclick="show('about')">About</a>
-      <a href="#" onclick="show('blog')">Blog</a>
+      <a href="/blog">Blog</a>
     </div>
     <div style="max-width:700px;margin:16px auto 12px;background:rgba(255,59,59,.05);border:1px solid rgba(255,59,59,.13);border-radius:9px;padding:14px 18px;">
       <p style="font-size:11px;color:#777;line-height:1.7;text-align:center;">⚖️ <strong style="color:#aaa">Legal Disclaimer:</strong> MiamiScammers.com is a community-powered public information resource. All reports are based on publicly available records and submitted evidence. We do not guarantee the accuracy of all information — errors may exist. Conduct your own research before drawing conclusions. Nothing on this site constitutes legal advice or a definitive finding of guilt. All persons are presumed innocent until proven otherwise in a court of law.</p>
@@ -1432,7 +1423,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
 function show(p){
   document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
   document.getElementById('page-'+p).classList.add('active');
-  ['home','submit','about','blog'].forEach(n=>{
+  ['home','submit','about'].forEach(n=>{
     const el=document.getElementById('nl-'+n);
     if(el) el.classList.toggle('on',n===p);
   });
