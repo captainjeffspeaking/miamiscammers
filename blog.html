@@ -27,8 +27,6 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(8,8,8,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .nav-inner{max-width:1000px;margin:0 auto;padding:0 24px;height:62px;display:flex;align-items:center;justify-content:space-between}
 .logo{font-weight:800;font-size:17px;display:flex;align-items:center;gap:8px}
@@ -40,28 +38,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(8,8,8,.93);ba
 .nav-btn:hover{opacity:.85}
 .tag{display:inline-flex;align-items:center;gap:6px;background:rgba(0,201,167,.1);border:1px solid rgba(0,201,167,.2);color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:18px}
 .tag::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%}
-
-/* BLOG */
-.blog-hero{padding:110px 24px 44px;background:linear-gradient(to bottom,#0d0d0d,var(--bg));border-bottom:1px solid var(--border)}
+.blog-hero{padding:110px 24px 52px;background:linear-gradient(to bottom,#0d0d0d,var(--bg));border-bottom:1px solid var(--border)}
 .blog-hero h1{font-size:clamp(26px,4vw,42px);font-weight:800;letter-spacing:-1px;margin-bottom:8px}
 .blog-hero p{color:var(--sub);font-size:15px;max-width:540px}
-.blog-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
-.blog-article h2{font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-.5px;margin-bottom:8px;line-height:1.2}
-.blog-meta{font-size:12px;color:var(--muted);margin-bottom:28px;display:flex;gap:18px;flex-wrap:wrap}
-.blog-article p{font-size:15px;color:var(--sub);line-height:1.85;margin-bottom:20px}
-.blog-article h3{font-size:18px;font-weight:800;color:var(--text);margin:36px 0 12px;letter-spacing:-.2px}
-.blog-article ul,.blog-article ol{padding-left:20px;margin-bottom:20px}
-.blog-article li{font-size:15px;color:var(--sub);line-height:1.8;margin-bottom:6px}
-.blog-article li strong{color:var(--text);font-weight:700}
-.blog-tip{background:rgba(0,201,167,.06);border:1px solid rgba(0,201,167,.18);border-radius:10px;padding:18px 22px;margin:28px 0}
-.blog-tip p{margin:0;font-size:14px;color:#ccc;line-height:1.75}
-.blog-tip strong{color:var(--accent)}
-.blog-warn{background:rgba(255,59,59,.05);border:1px solid rgba(255,59,59,.15);border-radius:10px;padding:18px 22px;margin:28px 0}
-.blog-warn p{margin:0;font-size:14px;color:#ccc;line-height:1.75}
-.blog-warn strong{color:var(--red)}
-.blog-divider{border:none;border-top:1px solid var(--border);margin:40px 0}
-
-/* FOOTER */
+.blog-index{padding:52px 0 80px}
+.post-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.post-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px;transition:border-color .2s,transform .2s;cursor:pointer}
+.post-card:hover{border-color:#333;transform:translateY(-3px)}
+.post-cat{display:inline-flex;align-items:center;gap:6px;background:rgba(0,201,167,.08);border:1px solid rgba(0,201,167,.15);color:var(--accent);font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:100px;width:fit-content}
+.post-title{font-size:18px;font-weight:800;line-height:1.3;letter-spacing:-.2px;color:var(--text)}
+.post-excerpt{font-size:13px;color:var(--sub);line-height:1.7;flex:1}
+.post-meta{font-size:11px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
+.post-read{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--accent);margin-top:4px}
+.post-read::after{content:'→'}
 footer{border-top:1px solid var(--border);padding:28px 24px}
 .foot-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
 .foot-logo{font-weight:800;font-size:14px;display:flex;align-items:center;gap:7px}
@@ -69,32 +58,29 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
 .foot-links a{font-size:12px;color:var(--muted);transition:color .2s}
 .foot-links a:hover{color:var(--text)}
 .foot-copy{font-size:11px;color:var(--muted)}
-
-/* RESPONSIVE */
 @media(max-width:680px){
   .nav-btn{display:none}
   .logo{font-size:14px}
   .foot-inner{flex-direction:column;text-align:center}
+  .post-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a class="logo" href="/"><span class="logo-dot"></span> Miami Scammers</a>
     <div class="nav-links">
       <a href="/">Reports</a>
-      <a href="/#submit" onclick="window.location='/?page=submit'">Submit Report</a>
-      <a href="/#about">About</a>
+      <a href="/">Submit Report</a>
+      <a href="/">About</a>
       <a href="/blog" class="on">Blog</a>
     </div>
-    <a class="nav-btn" href="/?page=submit">+ Submit a Report</a>
+    <a class="nav-btn" href="/">+ Submit a Report</a>
   </div>
 </nav>
 
-<!-- BLOG HERO -->
 <div class="blog-hero">
   <div class="wrap">
     <div class="tag">Resources</div>
@@ -103,131 +89,47 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
   </div>
 </div>
 
-<!-- ARTICLES -->
-<div class="blog-wrap">
+<section class="blog-index">
+  <div class="wrap">
+    <div class="post-grid">
 
-  <article class="blog-article">
-    <div class="blog-meta">
-      <span>📅 October 2026</span>
-      <span>📂 Rental Fraud</span>
-      <span>⏱ 5 min read</span>
+      <a class="post-card" href="/blog/business-scams">
+        <span class="post-cat">Business Fraud</span>
+        <div class="post-title">Business Scams: Why a Contract Isn't Enough — and What You Must Do Before You Pay</div>
+        <div class="post-excerpt">Scammers know the Small Claims Court limit is $8,000 — and they keep amounts just below it on purpose. Learn why contracts with LLCs can be worthless, why you need a home address before you sign, and the 9-step checklist that protects you.</div>
+        <div class="post-meta">
+          <span>📅 October 2026</span>
+          <span>⏱ 6 min read</span>
+        </div>
+        <span class="post-read">Read article</span>
+      </a>
+
+      <a class="post-card" href="/blog/romance-scams">
+        <span class="post-cat">Romance Fraud</span>
+        <div class="post-title">Romance Scams: How Scammers Use Fake Love to Steal Real Money</div>
+        <div class="post-excerpt">They spend weeks building your trust — then a crisis appears and they need money. Learn how to spot the playbook, what pig butchering is, and the one rule that prevents 100% of romance scams before it's too late.</div>
+        <div class="post-meta">
+          <span>📅 October 2026</span>
+          <span>⏱ 6 min read</span>
+        </div>
+        <span class="post-read">Read article</span>
+      </a>
+
+      <a class="post-card" href="/blog/rental-scams">
+        <span class="post-cat">Rental Fraud</span>
+        <div class="post-title">How to Protect Yourself From Rental Scams in Miami</div>
+        <div class="post-excerpt">Unauthorized sublets, squatters collecting deposits, landlords pocketing security money they have no right to keep. The most common rental scams in Miami — and a step-by-step checklist to protect yourself before you sign or pay anything.</div>
+        <div class="post-meta">
+          <span>📅 October 2026</span>
+          <span>⏱ 5 min read</span>
+        </div>
+        <span class="post-read">Read article</span>
+      </a>
+
     </div>
-    <h2>How to Protect Yourself From Rental Scams in Miami</h2>
-    <p>Miami's rental market is competitive — and scammers know it. High demand, rising prices, and desperate renters create the perfect conditions for fraud. Whether you're renting a room, an apartment, or a house, here are the most common schemes and exactly what you can do to protect yourself.</p>
+  </div>
+</section>
 
-    <hr class="blog-divider">
-
-    <h3>🚨 Common Rental Scams to Watch Out For</h3>
-
-    <h3>1. The Unauthorized Sublet</h3>
-    <p>This is one of the most common scams in Miami. Someone rents an apartment and then turns around and re-rents it to you — without the landlord's knowledge or permission. They collect your deposit and first month's rent, and the moment a real issue comes up (like the water getting shut off or the actual owner showing up), you have no legal standing. The lease is between them and the landlord, not you. In many cases, the scammer doesn't even have the right to sublet.</p>
-    <div class="blog-warn"><p><strong>Red flag:</strong> The person you're paying is a tenant, not the property owner. Always ask who owns the unit and verify it before signing anything or handing over money.</p></div>
-
-    <h3>2. Squatters Who Rent Out Properties</h3>
-    <p>In extreme cases, a person will squat in a vacant or foreclosed property and advertise it for rent — collecting deposits from multiple victims before disappearing. By the time you try to move in, either someone else is already there or the true owner has no idea who you are.</p>
-
-    <h3>3. The Security Deposit Trap</h3>
-    <p>Even in legitimate rentals, landlords in Florida frequently hold onto security deposits unfairly. They may claim damages that don't exist, fail to provide an itemized list within the required 30-day window, or simply go silent after you move out. Florida law requires landlords to return the deposit (with a written claim of any deductions) within 15–30 days, depending on the situation. Many don't.</p>
-    <div class="blog-tip"><p><strong>Know your rights:</strong> Under Florida Statute 83.49, if your landlord fails to return your deposit or give proper written notice within 30 days, they may forfeit their right to keep any portion of it. Document everything.</p></div>
-
-    <h3>4. Fake Listings</h3>
-    <p>Scammers copy real listings from Zillow, Apartments.com, or Craigslist, lower the price to make it look like a deal, and post it as their own. They'll tell you the owner is out of town and offer to mail you the keys after you wire them a deposit. You'll never hear from them again.</p>
-
-    <h3>5. LLC Shell Games</h3>
-    <p>Some bad actors create LLCs specifically to rent properties — or to look like legitimate property management companies — making it harder to track them down if something goes wrong. The LLC may have no real assets and get dissolved shortly after. Don't let an LLC name make you feel safer without doing your homework.</p>
-
-    <hr class="blog-divider">
-
-    <h3>✅ How to Protect Yourself — A Checklist</h3>
-    <ol>
-      <li><strong>Verify who owns the property.</strong> Search the property address on the Miami-Dade Property Appraiser website (propertysearch.miamidade.gov). The owner's name should match the person you're signing a lease with — or there should be a clear, documented management agreement.</li>
-      <li><strong>Ask to see their lease first.</strong> If you're renting from a tenant (not the owner), ask to see their current lease. Check whether subletting is allowed. If they refuse to show it or get defensive, walk away.</li>
-      <li><strong>Check their ID — and match it to documents.</strong> Ask for a government-issued photo ID. The name on the ID should match the name on the lease and any agreement you sign. If there's a mismatch, that's a serious problem.</li>
-      <li><strong>If they claim a business owns it, verify the LLC.</strong> Search the company name on the Florida Division of Corporations website (search.sunbiz.org). Look at when it was formed, who the registered agent is, and whether it's in good standing. A brand-new LLC with no address and one officer should raise questions.</li>
-      <li><strong>Never wire money or pay in cash.</strong> Use a check, Zelle, or another traceable payment method. A landlord who insists on wire transfers or Venmo before you've signed anything is a red flag.</li>
-      <li><strong>Document the unit before and after with timestamps.</strong> Take dated photos and video of every room on move-in day. Email them to the landlord that same day so there's a paper trail. This is your best protection against false damage claims when you move out.</li>
-      <li><strong>Get everything in writing.</strong> Every promise — parking included, utilities covered, repairs to be made — must be in the lease or a signed addendum. Verbal agreements are nearly impossible to enforce.</li>
-      <li><strong>Never pay a deposit before you've toured the unit in person.</strong> If the landlord claims they're out of town and can't show you the place, that's one of the oldest scams in the book. If the deal seems too good to be true, it almost always is.</li>
-      <li><strong>Look up their name and the property address online.</strong> A quick search can turn up eviction filings, court records, or complaints against the person. Sites like MiamiScammers.com exist for exactly this reason.</li>
-    </ol>
-
-    <div class="blog-tip"><p><strong>Bonus tip:</strong> Before you sign, you can pull eviction records in Miami-Dade through the Clerk of Courts online portal. If your prospective landlord has filed multiple evictions, it may be a sign of someone who creates difficult living conditions or takes deposits and doesn't follow through.</p></div>
-
-    <hr class="blog-divider">
-
-    <h3>If You've Already Been Scammed</h3>
-    <p>If someone took your deposit and disappeared, or you moved into a unit only to find out it was rented illegally, here's what to do:</p>
-    <ul>
-      <li>File a police report with Miami-Dade Police Department. Theft of rent money or a deposit is a crime.</li>
-      <li>Contact the Florida Attorney General's Office at myfloridalegal.com to file a consumer fraud complaint.</li>
-      <li>If the scammer is a tenant, contact the actual landlord — they may have legal recourse against their tenant on your behalf.</li>
-      <li>Small Claims Court in Miami-Dade handles disputes up to $8,000. For larger amounts, you'll need County Court. Filing fees are low and you don't need a lawyer.</li>
-      <li>Submit a report on MiamiScammers.com so others in the community can be warned.</li>
-    </ul>
-    <div class="blog-warn"><p><strong>Remember:</strong> Knowledge is your best protection. The scams described here work because renters are in a hurry and under pressure. Take an extra day to verify — it could save you thousands of dollars.</p></div>
-  </article>
-
-  <hr class="blog-divider">
-
-  <article class="blog-article">
-    <div class="blog-meta">
-      <span>📅 October 2026</span>
-      <span>📂 Business Fraud</span>
-      <span>⏱ 6 min read</span>
-    </div>
-    <h2>Business Scams: Why a Contract Isn't Enough — and What You Must Do Before You Pay</h2>
-    <p>A signed contract feels like protection. It isn't — not on its own. Business scammers know exactly how the legal system works, and many of them build their entire operation around the gaps. If you're hiring someone for a service, working with a freelancer, or entering any paid business arrangement, read this first.</p>
-
-    <hr class="blog-divider">
-
-    <h3>🚨 The $8,000 Trap — And Why Scammers Love It</h3>
-    <p>In Florida, Small Claims Court handles disputes up to $8,000. Above that, you're in County Court — and you almost certainly need a lawyer. Attorney retainers alone often run $3,000–$5,000 or more, and litigation can drag on for months.</p>
-    <p>Scammers know this math better than you do. Many intentionally keep their takes under $8,000 — sometimes right at $5,000 or $6,000 — because they've calculated that it's not worth your time or money to chase them. Even in Small Claims Court, a judgment in your favor means nothing if you can't collect. If they've moved on, dissolved their LLC, or have no assets in their name, a judgment is just paper.</p>
-    <div class="blog-warn"><p><strong>The cold reality:</strong> Getting scammed out of $5,000 often costs more to fight legally than it does to absorb the loss. Scammers count on exactly that. Prevention is your only real protection.</p></div>
-
-    <h3>📄 Why Contracts With LLCs Can Be Worthless</h3>
-    <p>Signing a contract with an LLC sounds official. But an LLC is only as good as what's behind it — and savvy scammers use LLCs as a wall between you and them personally.</p>
-    <ul>
-      <li><strong>The LLC may no longer exist.</strong> Florida LLCs must file an annual report and pay a fee to stay active. Many scammers let their LLC lapse — or dissolve it after the job — leaving you holding a contract with an entity that legally no longer exists.</li>
-      <li><strong>The LLC may have no assets.</strong> Even if the LLC is active, it may have zero bank accounts, no property, and nothing to collect from. A judgment against a shell LLC is uncollectable.</li>
-      <li><strong>New LLCs are easy to form.</strong> A scammer who burns one LLC can form a new one the next day under a slightly different name. They repeat the cycle. Check how old the LLC is before you sign anything.</li>
-      <li><strong>The person behind the LLC may not be personally liable.</strong> One of the main purposes of an LLC is to shield the owner from personal liability. If a scammer operates entirely through an LLC and you can't pierce the corporate veil, your contract may not touch their personal bank account or property.</li>
-    </ul>
-    <div class="blog-tip"><p><strong>Always verify:</strong> Search any LLC on Florida's Division of Corporations site at search.sunbiz.org. Check the formation date, the registered agent, and whether it's in "Active" status. A company formed last month with a P.O. box as its address is a serious red flag.</p></div>
-
-    <h3>📍 If You Can't Serve Them, You Can't Sue Them</h3>
-    <p>This is the part most people don't think about until it's too late. To take someone to court — even Small Claims — you have to serve them with legal papers. That requires a known address. If all you have is an email address, a phone number, and an LLC name, you may have no way to serve the person.</p>
-    <p>Florida allows substitute service on an LLC's registered agent, but scammers often use registered agent services with no real connection to them. Personal service — showing up at their home — requires you to know where they live. If they gave you a business address that's a coworking space or a mailbox, you're stuck.</p>
-    <div class="blog-warn"><p><strong>Bottom line:</strong> Before you sign a contract, make sure you have a home address for the person you're doing business with. Not a P.O. box. Not just a business address. An actual residential address — because that's what you'll need if things go wrong.</p></div>
-
-    <h3>✅ Before You Sign — The Business Contract Checklist</h3>
-    <ol>
-      <li><strong>Get a copy of their government-issued photo ID.</strong> This isn't optional. Any legitimate professional will understand the request. If they refuse or make excuses, walk away. A driver's license tells you their legal name and their address at the time of issuance.</li>
-      <li><strong>Get their home address in writing.</strong> Not just a business address — a residential address. Include it in the contract itself. If they won't provide one, that's your answer.</li>
-      <li><strong>Verify any LLC before you pay a dollar.</strong> Pull up the company on search.sunbiz.org. Check when it was formed, confirm it's in Active status, and look at who the registered agent and officers are. Ask yourself: does this look like a real company?</li>
-      <li><strong>Never pay a large deposit upfront.</strong> A standard arrangement for any project is a small deposit to begin (10–25%), a milestone payment mid-project, and the remainder on completion. Anyone who demands 50% or 100% upfront before producing anything has very little incentive to deliver.</li>
-      <li><strong>Tie payments to deliverables — in the contract.</strong> "Payment due upon project completion" is vague. Spell out exactly what must be delivered, by when, and in what form before each payment is released. Make it specific and measurable.</li>
-      <li><strong>Do not pay the final balance until you have the finished product in hand.</strong> This seems obvious, but scammers are skilled at creating urgency — "I need the last payment to release the files," "My server costs are due." Hold the final payment until you have everything you paid for.</li>
-      <li><strong>Build in a timeline and consequences for missing it.</strong> A contract without a deadline is unenforceable in any meaningful way. Include specific due dates and language about what happens if they're missed — whether that's a refund, a reduced fee, or termination of the agreement.</li>
-      <li><strong>Keep every communication in writing.</strong> Don't let important conversations happen only by phone. Follow up calls with an email: "As discussed, you agreed to deliver X by Y date." If it ever comes to court, texts and emails are evidence. A phone call is your word against theirs.</li>
-      <li><strong>Search their name before you hire them.</strong> A quick Google search, a Florida court records search, and a visit to sites like MiamiScammers.com can reveal a pattern you'd never see from a single interaction. Scammers rely on each victim not knowing about the previous ones.</li>
-    </ol>
-
-    <h3>If It Goes Wrong</h3>
-    <p>If someone has taken your money and failed to deliver — or disappeared — here's your path forward:</p>
-    <ul>
-      <li><strong>File a police report immediately.</strong> Theft of services and contract fraud are criminal matters. A police report creates an official record and may trigger an investigation, especially if others have filed reports against the same person.</li>
-      <li><strong>File a complaint with the Florida Attorney General</strong> at myfloridalegal.com. The AG's office tracks patterns of fraud and can take action against repeat offenders.</li>
-      <li><strong>Small Claims Court</strong> (for amounts up to $8,000) is relatively fast and inexpensive — filing fees are under $100 in most cases, and you don't need a lawyer. But you must be able to serve the defendant at a known address.</li>
-      <li><strong>Florida's Deceptive and Unfair Trade Practices Act (FDUTPA)</strong> may allow you to recover attorney's fees in addition to damages if a business misled you. Consult an attorney if the amount is significant.</li>
-      <li><strong>Submit a report to MiamiScammers.com</strong> so the next person doesn't have to learn the same lesson you did.</li>
-    </ul>
-    <div class="blog-tip"><p><strong>The single most important thing:</strong> Slow down. Scammers create artificial urgency — a "limited time" offer, a project that has to start immediately, a deal that disappears if you ask too many questions. Any legitimate professional will give you time to verify who they are. If someone is pressuring you to sign and pay before you've done your homework, that pressure itself is the warning sign.</p></div>
-  </article>
-
-</div>
-
-<!-- FOOTER -->
 <footer>
   <div class="foot-inner">
     <div class="foot-logo"><span class="logo-dot"></span> Miami Scammers</div>
