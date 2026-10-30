@@ -178,6 +178,26 @@ hr.div{border:none;border-top:1px solid var(--border);margin:28px 0}
 .ios-banner-close{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.08);border:none;color:#777;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
 .ios-banner-close:hover{background:rgba(255,255,255,.15);color:#f0f0f0}
 
+/* BLOG */
+.blog-hero{padding:110px 24px 44px;background:linear-gradient(to bottom,#0d0d0d,var(--bg));border-bottom:1px solid var(--border)}
+.blog-hero h1{font-size:clamp(26px,4vw,42px);font-weight:800;letter-spacing:-1px;margin-bottom:8px}
+.blog-hero p{color:var(--sub);font-size:15px;max-width:540px}
+.blog-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+.blog-article h2{font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-.5px;margin-bottom:8px;line-height:1.2}
+.blog-meta{font-size:12px;color:var(--muted);margin-bottom:28px;display:flex;gap:18px;flex-wrap:wrap}
+.blog-article p{font-size:15px;color:var(--sub);line-height:1.85;margin-bottom:20px}
+.blog-article h3{font-size:18px;font-weight:800;color:var(--text);margin:36px 0 12px;letter-spacing:-.2px}
+.blog-article ul,.blog-article ol{padding-left:20px;margin-bottom:20px}
+.blog-article li{font-size:15px;color:var(--sub);line-height:1.8;margin-bottom:6px}
+.blog-article li strong{color:var(--text);font-weight:700}
+.blog-tip{background:rgba(0,201,167,.06);border:1px solid rgba(0,201,167,.18);border-radius:10px;padding:18px 22px;margin:28px 0}
+.blog-tip p{margin:0;font-size:14px;color:#ccc;line-height:1.75}
+.blog-tip strong{color:var(--accent)}
+.blog-warn{background:rgba(255,59,59,.05);border:1px solid rgba(255,59,59,.15);border-radius:10px;padding:18px 22px;margin:28px 0}
+.blog-warn p{margin:0;font-size:14px;color:#ccc;line-height:1.75}
+.blog-warn strong{color:var(--red)}
+.blog-divider{border:none;border-top:1px solid var(--border);margin:40px 0}
+
 /* FOOTER */
 footer{border-top:1px solid var(--border);padding:28px 24px}
 .foot-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
@@ -257,6 +277,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
       <a href="#" onclick="show('home')" class="on" id="nl-home">Reports</a>
       <a href="#" onclick="show('submit')" id="nl-submit">Submit Report</a>
       <a href="#" onclick="show('about')" id="nl-about">About</a>
+      <a href="#" onclick="show('blog')" id="nl-blog">Blog</a>
     </div>
     <button class="nav-btn" onclick="show('submit')">+ Submit a Report</button>
   </div>
@@ -1255,6 +1276,82 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
   <button class="ios-banner-close" onclick="dismissBanner()">✕</button>
 </div>
 
+<!-- BLOG PAGE -->
+<div class="page" id="page-blog">
+  <div class="blog-hero">
+    <div class="wrap">
+      <div class="tag">Resources</div>
+      <h1>Miami Scammers Blog</h1>
+      <p>Practical guides to help you recognize fraud, protect your money, and stay one step ahead of scammers in South Florida.</p>
+    </div>
+  </div>
+
+  <div class="blog-wrap">
+    <article class="blog-article">
+      <div class="blog-meta">
+        <span>📅 October 2026</span>
+        <span>📂 Rental Fraud</span>
+        <span>⏱ 5 min read</span>
+      </div>
+      <h2>How to Protect Yourself From Rental Scams in Miami</h2>
+      <p>Miami's rental market is competitive — and scammers know it. High demand, rising prices, and desperate renters create the perfect conditions for fraud. Whether you're renting a room, an apartment, or a house, here are the most common schemes and exactly what you can do to protect yourself.</p>
+
+      <hr class="blog-divider">
+
+      <h3>🚨 Common Rental Scams to Watch Out For</h3>
+
+      <h3>1. The Unauthorized Sublet</h3>
+      <p>This is one of the most common scams in Miami. Someone rents an apartment and then turns around and re-rents it to you — without the landlord's knowledge or permission. They collect your deposit and first month's rent, and the moment a real issue comes up (like the water getting shut off or the actual owner showing up), you have no legal standing. The lease is between them and the landlord, not you. In many cases, the scammer doesn't even have the right to sublet.</p>
+      <div class="blog-warn"><p><strong>Red flag:</strong> The person you're paying is a tenant, not the property owner. Always ask who owns the unit and verify it before signing anything or handing over money.</p></div>
+
+      <h3>2. Squatters Who Rent Out Properties</h3>
+      <p>In extreme cases, a person will squat in a vacant or foreclosed property and advertise it for rent — collecting deposits from multiple victims before disappearing. By the time you try to move in, either someone else is already there or the true owner has no idea who you are.</p>
+
+      <h3>3. The Security Deposit Trap</h3>
+      <p>Even in legitimate rentals, landlords in Florida frequently hold onto security deposits unfairly. They may claim damages that don't exist, fail to provide an itemized list within the required 30-day window, or simply go silent after you move out. Florida law requires landlords to return the deposit (with a written claim of any deductions) within 15–30 days, depending on the situation. Many don't.</p>
+      <div class="blog-tip"><p><strong>Know your rights:</strong> Under Florida Statute 83.49, if your landlord fails to return your deposit or give proper written notice within 30 days, they may forfeit their right to keep any portion of it. Document everything.</p></div>
+
+      <h3>4. Fake Listings</h3>
+      <p>Scammers copy real listings from Zillow, Apartments.com, or Craigslist, lower the price to make it look like a deal, and post it as their own. They'll tell you the owner is out of town and offer to mail you the keys after you wire them a deposit. You'll never hear from them again.</p>
+
+      <h3>5. LLC Shell Games</h3>
+      <p>Some bad actors create LLCs specifically to rent properties — or to look like legitimate property management companies — making it harder to track them down if something goes wrong. The LLC may have no real assets and get dissolved shortly after. Don't let an LLC name make you feel safer without doing your homework.</p>
+
+      <hr class="blog-divider">
+
+      <h3>✅ How to Protect Yourself — A Checklist</h3>
+
+      <ol>
+        <li><strong>Verify who owns the property.</strong> Search the property address on the Miami-Dade Property Appraiser website (propertysearch.miamidade.gov). The owner's name should match the person you're signing a lease with — or there should be a clear, documented management agreement.</li>
+        <li><strong>Ask to see their lease first.</strong> If you're renting from a tenant (not the owner), ask to see their current lease. Check whether subletting is allowed. If they refuse to show it or get defensive, walk away.</li>
+        <li><strong>Check their ID — and match it to documents.</strong> Ask for a government-issued photo ID. The name on the ID should match the name on the lease and any agreement you sign. If there's a mismatch, that's a serious problem.</li>
+        <li><strong>If they claim a business owns it, verify the LLC.</strong> Search the company name on the Florida Division of Corporations website (search.sunbiz.org). Look at when it was formed, who the registered agent is, and whether it's in good standing. A brand-new LLC with no address and one officer should raise questions.</li>
+        <li><strong>Never wire money or pay in cash.</strong> Use a check, Zelle, or another traceable payment method. A landlord who insists on wire transfers or Venmo before you've signed anything is a red flag.</li>
+        <li><strong>Document the unit before and after with timestamps.</strong> Take dated photos and video of every room on move-in day. Email them to the landlord that same day so there's a paper trail. This is your best protection against false damage claims when you move out.</li>
+        <li><strong>Get everything in writing.</strong> Every promise — parking included, utilities covered, repairs to be made — must be in the lease or a signed addendum. Verbal agreements are nearly impossible to enforce.</li>
+        <li><strong>Never pay a deposit before you've toured the unit in person.</strong> If the landlord claims they're out of town and can't show you the place, that's one of the oldest scams in the book. If the deal seems too good to be true, it almost always is.</li>
+        <li><strong>Look up their name and the property address online.</strong> A quick search can turn up eviction filings, court records, or complaints against the person. Sites like MiamiScammers.com exist for exactly this reason.</li>
+      </ol>
+
+      <div class="blog-tip"><p><strong>Bonus tip:</strong> Before you sign, you can pull eviction records in Miami-Dade through the Clerk of Courts online portal. If your prospective landlord has filed multiple evictions, it may be a sign of someone who creates difficult living conditions or takes deposits and doesn't follow through.</p></div>
+
+      <hr class="blog-divider">
+
+      <h3>If You've Already Been Scammed</h3>
+      <p>If someone took your deposit and disappeared, or you moved into a unit only to find out it was rented illegally, here's what to do:</p>
+      <ul>
+        <li>File a police report with Miami-Dade Police Department. Theft of rent money or a deposit is a crime.</li>
+        <li>Contact the Florida Attorney General's Office at myfloridalegal.com to file a consumer fraud complaint.</li>
+        <li>If the scammer is a tenant, contact the actual landlord — they may have legal recourse against their tenant on your behalf.</li>
+        <li>Small Claims Court in Miami-Dade handles disputes up to $8,000. For larger amounts, you'll need County Court. Filing fees are low and you don't need a lawyer.</li>
+        <li>Submit a report on MiamiScammers.com so others in the community can be warned.</li>
+      </ul>
+
+      <div class="blog-warn"><p><strong>Remember:</strong> Knowledge is your best protection. The scams described here work because renters are in a hurry and under pressure. Take an extra day to verify — it could save you thousands of dollars.</p></div>
+    </article>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="foot-inner">
@@ -1263,6 +1360,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
       <a href="#" onclick="show('home')">Reports</a>
       <a href="#" onclick="show('submit')">Submit</a>
       <a href="#" onclick="show('about')">About</a>
+      <a href="#" onclick="show('blog')">Blog</a>
     </div>
     <div style="max-width:700px;margin:16px auto 12px;background:rgba(255,59,59,.05);border:1px solid rgba(255,59,59,.13);border-radius:9px;padding:14px 18px;">
       <p style="font-size:11px;color:#777;line-height:1.7;text-align:center;">⚖️ <strong style="color:#aaa">Legal Disclaimer:</strong> MiamiScammers.com is a community-powered public information resource. All reports are based on publicly available records and submitted evidence. We do not guarantee the accuracy of all information — errors may exist. Conduct your own research before drawing conclusions. Nothing on this site constitutes legal advice or a definitive finding of guilt. All persons are presumed innocent until proven otherwise in a court of law.</p>
@@ -1275,7 +1373,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
 function show(p){
   document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
   document.getElementById('page-'+p).classList.add('active');
-  ['home','submit','about'].forEach(n=>{
+  ['home','submit','about','blog'].forEach(n=>{
     const el=document.getElementById('nl-'+n);
     if(el) el.classList.toggle('on',n===p);
   });
