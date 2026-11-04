@@ -65,10 +65,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(8,8,8,.93);ba
 .stat-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
 
 /* SEARCH */
-.search-box{margin-bottom:22px}
-.search-input{width:100%;background:#0a0a0a;border:1px solid var(--border);border-radius:10px;color:var(--text);font-family:inherit;font-size:14px;padding:11px 16px;outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none}
-.search-input:focus{border-color:var(--accent)}
-.search-input::placeholder{color:var(--muted)}
+.search-box{margin-bottom:28px;position:relative}
+.search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:16px;pointer-events:none;opacity:.5}
+.search-input{width:100%;background:#111;border:1px solid #2a2a2a;border-radius:12px;color:var(--text);font-family:inherit;font-size:16px;padding:14px 16px 14px 44px;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,201,167,.12)}
+.search-input::placeholder{color:#555}
 .search-input::-webkit-search-decoration,.search-input::-webkit-search-cancel-button,.search-input::-webkit-search-results-button,.search-input::-webkit-search-results-decoration{display:none;-webkit-appearance:none}
 .no-results{text-align:center;padding:48px 0;color:var(--muted);font-size:14px;display:none}
 
@@ -104,6 +105,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(8,8,8,.93);ba
 .meta-i{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:4px}
 .type-tag{display:inline-block;background:rgba(255,59,59,.07);color:var(--red);border:1px solid rgba(255,59,59,.15);font-size:10px;font-weight:700;padding:3px 9px;border-radius:6px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
 .desc{font-size:13px;color:var(--sub);line-height:1.7}
+.desc p{margin:0 0 8px}
+.desc p:last-child{margin-bottom:0}
 
 /* RECORD */
 .record{margin:0 18px 18px;border:1px solid var(--border);border-radius:9px;overflow:hidden}
@@ -321,11 +324,57 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
       </div>
 
       <div class="search-box">
-        <input class="search-input" type="text" id="searchInput" placeholder="Search by name…" oninput="searchReports(this.value)" autocomplete="off" autocorrect="off" spellcheck="false">
+        <span class="search-icon">🔍</span>
+        <input class="search-input" type="text" id="searchInput" placeholder="Search reports by name…" oninput="searchReports(this.value)" autocomplete="off" autocorrect="off" spellcheck="false">
       </div>
       <div class="no-results" id="noResults">No reports match your search.</div>
 
       <div class="grid" id="grid">
+
+        <!-- REPORT #001 — Daniel Sharkey (PINNED) -->
+        <article class="card" data-cat="business" data-pinned="true">
+          <div class="card-top">
+            <span class="rpt-id">Report #001</span>
+            <span class="badge badge-v">✓ Verified</span>
+            <span class="badge" style="background:rgba(255,180,0,.12);color:#ffb400;border:1px solid rgba(255,180,0,.25);margin-left:auto;">📌 Pinned</span>
+          </div>
+          <div class="card-body">
+            <span onclick="openLightbox('daniel sharkey miami - Google Search.png')" style="cursor:pointer"><img class="photo" src="daniel sharkey miami - Google Search.png" alt="Daniel Sharkey"></span>
+            <div>
+              <div class="rpt-name">Daniel Sharkey</div>
+              <div class="meta">
+                <span class="meta-i">📍 Miami, FL</span>
+                <span class="meta-i">🗓 2026</span>
+              </div>
+              <div class="type-tag">Business / Contract Fraud</div>
+              <div class="desc"><p>Breached a $10,000 contract after being hired to produce an event for a Miami-based company.</p><p>Cancelled the event two days prior without notice or refund. The event never took place and funds were not returned.</p></div>
+            </div>
+          </div>
+          <div class="record">
+            <div class="record-head">
+              <span class="record-title">⚠ Criminal &amp; Traffic Records</span>
+              <span class="record-src">Source: BeenVerified.com</span>
+            </div>
+            <div class="record-ph" style="padding:18px 16px;text-align:left;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="color:#00c9a7;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">72 Criminal or Traffic Records Found</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <span style="color:#00c9a7;font-size:16px">●</span>
+                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">0 Bankruptcies Found</span>
+              </div>
+              <p style="font-size:11px;color:#555;line-height:1.5;">Data sourced from publicly available records via BeenVerified.com. Miami Scammers does not guarantee accuracy of third-party record data.</p>
+            </div>
+          </div>
+          <div class="card-foot">
+            <span class="foot-date">Filed May 2026</span>
+            <div class="foot-acts">
+              <button class="act-btn" onclick="alert('Flagged for review. Thank you.')">⚑ Flag</button>
+              <button class="act-btn" onclick="copyLink()">↗ Share</button>
+            </div>
+          </div>
+        </article>
 
         <!-- REPORT #017 — Nicolas Ruiz -->
         <article class="card" data-cat="business">
@@ -343,7 +392,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">🗓 2025–2026</span>
               </div>
               <div class="type-tag">Event Fraud / Vendor Fraud</div>
-              <p class="desc">Nicolas Ruiz promoted a "luxury wellness event" through his Organick 365 Instagram account without securing full payment to the Miami venue. He paid only a fraction of the agreed fee before the event, borrowed $400 from someone on the day promising to repay them, and advertised "limited tickets available" via social media while the event was well below capacity. Multiple vendors arrived to find the venue locked. When asked to settle the outstanding balance that night, Nicolas claimed his "partner was at dinner" and couldn't pay. The venue owner never received full payment. Vendors demanded refunds after the event.</p>
+              <div class="desc"><p>Nicolas Ruiz promoted a "luxury wellness event" through his Organick 365 Instagram account without securing full payment to the Miami venue. He paid only a fraction of the agreed fee before the event and borrowed $400 from someone day-of, promising to repay them.</p><p>He advertised "limited tickets available" via social media while the event was well below capacity. Multiple vendors arrived to find the venue locked.</p><p>When asked to settle the outstanding balance that night, Nicolas claimed his "partner was at dinner" and couldn't pay. The venue owner never received full payment. Vendors demanded refunds.</p></div>
             </div>
           </div>
           <div class="record">
@@ -400,7 +449,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">🗓 Multiple Years</span>
               </div>
               <div class="type-tag">Fraud / Theft of Services / Rental Fraud</div>
-              <p class="desc">Ernest Foutner befriended the victim, gained her trust, and convinced her he was skilled in website design, publishing, and marketing. He promised to build two websites and illustrate, publish, and market three children's books — collecting $5,200 in payments — but failed to deliver. After months, he provided only incomplete drafts and poor-quality, heavily AI-generated material. He repeatedly lied, manipulated the victim, and changed the names of his businesses multiple times. Additional intel reports he engages in rental fraud — squatting in apartments and living rent-free until forcibly evicted. Public records show an arrest for deposit account fraud of $1,500 or more.</p>
+              <div class="desc"><p>Ernest Foutner befriended the victim, gained her trust, and convinced her he was skilled in website design, publishing, and marketing. He promised to build two websites and illustrate, publish, and market three children's books — collecting $5,200 in payments — but failed to deliver.</p><p>After months, he provided only incomplete drafts and poor-quality, heavily AI-generated material. He repeatedly lied, manipulated the victim, and changed his business names multiple times to obscure his history.</p><p>Additional intel reports he engages in rental fraud — squatting in apartments and living rent-free until forcibly evicted. Public records show an arrest for deposit account fraud of $1,500 or more.</p></div>
             </div>
           </div>
           <div class="record">
@@ -445,51 +494,6 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
           </div>
         </article>
 
-        <!-- REPORT #001 — Daniel Sharkey -->
-        <article class="card" data-cat="business">
-          <div class="card-top">
-            <span class="rpt-id">Report #001</span>
-            <span class="badge badge-v">✓ Verified</span>
-          </div>
-          <div class="card-body">
-            <span onclick="openLightbox('daniel sharkey miami - Google Search.png')" style="cursor:pointer"><img class="photo" src="daniel sharkey miami - Google Search.png" alt="Daniel Sharkey"></span>
-            <div>
-              <div class="rpt-name">Daniel Sharkey</div>
-              <div class="meta">
-                <span class="meta-i">📍 Miami, FL</span>
-                <span class="meta-i">🗓 2026</span>
-              </div>
-              <div class="type-tag">Business / Contract Fraud</div>
-              <p class="desc">Breached a $10,000 contract after being hired to produce an event for a Miami-based company. Cancelled the event two days prior without notice or refund. Victim reports the event never took place and funds were not returned.</p>
-            </div>
-          </div>
-          <div class="record">
-            <div class="record-head">
-              <span class="record-title">⚠ Criminal &amp; Traffic Records</span>
-              <span class="record-src">Source: BeenVerified.com</span>
-            </div>
-            <div class="record-ph" style="padding:18px 16px;text-align:left;">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-                <span style="color:#00c9a7;font-size:16px">●</span>
-                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">72 Criminal or Traffic Records Found</span>
-              </div>
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
-                <span style="color:#00c9a7;font-size:16px">●</span>
-                <span style="font-size:13px;font-weight:600;color:#f0f0f0;">0 Bankruptcies Found</span>
-              </div>
-              <p style="font-size:11px;color:#555;line-height:1.5;">Data sourced from publicly available records via BeenVerified.com. Miami Scammers does not guarantee accuracy of third-party record data.</p>
-            </div>
-          </div>
-          <div class="card-foot">
-            <span class="foot-date">Filed May 2026</span>
-            <div class="foot-acts">
-              <button class="act-btn" onclick="alert('Flagged for review. Thank you.')">⚑ Flag</button>
-              <button class="act-btn" onclick="copyLink()">↗ Share</button>
-            </div>
-          </div>
-        </article>
-
-
         <!-- REPORT #002 — Paula Rosello Mateu -->
         <article class="card" data-cat="rental">
           <div class="card-top">
@@ -505,7 +509,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">🗓 2025–2026</span>
               </div>
               <div class="type-tag">Rental / Venue Fraud</div>
-              <p class="desc">Spanish national and tennis player who fraudulently represented a Miami Beach villa as belonging to her family. Signed a venue contract with a Miami-based company for a paid event, collected a deposit to secure the property, then disappeared — deactivating her Instagram, blocking the victim on WhatsApp, and cutting off all contact. Investigation revealed the villa was never her family's property.</p>
+              <div class="desc"><p>Spanish national and tennis player who fraudulently represented a Miami Beach villa as belonging to her family. Signed a venue contract with a Miami-based company for a paid event and collected a deposit to secure the property.</p><p>She then disappeared — deactivating her Instagram, blocking the victim on WhatsApp, and cutting off all contact. Investigation revealed the villa was never her family's property.</p></div>
             </div>
           </div>
           <div class="record">
@@ -553,7 +557,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">🗓 2025–2026</span>
               </div>
               <div class="type-tag">Rental / Real Estate Fraud</div>
-              <p class="desc">Posed as a landlord on Facebook Marketplace, listing fake rental properties and collecting deposits from victims. Used FaceTime-style virtual showings and phony lease agreements to appear legitimate. At least 7 victims lost a combined $50,000+, with individual losses ranging from $1,000 to $35,000. Arrested April 2026 and charged with organized fraud, second-degree grand theft, and six counts of third-degree grand theft.</p>
+              <div class="desc"><p>Posed as a landlord on Facebook Marketplace, listing fake rental properties and collecting deposits from victims. Used FaceTime-style virtual showings and phony lease agreements to appear legitimate.</p><p>At least 7 victims lost a combined $50,000+, with individual losses ranging from $1,000 to $35,000. Arrested April 2026 and charged with organized fraud, second-degree grand theft, and six counts of third-degree grand theft.</p></div>
             </div>
           </div>
           <div class="record">
@@ -602,7 +606,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">🗓 2024–2026</span>
               </div>
               <div class="type-tag">Business / Financial Fraud</div>
-              <p class="desc">Miami-based individual with a documented history of criminal and traffic violations, multiple fraud cases on record, and named in multiple civil lawsuits. A Yelp reviewer flagged unreliable business practices and missing funds, strongly cautioning others against engaging with her for any financial or business dealings.</p>
+              <div class="desc"><p>Miami-based individual with a documented history of criminal and traffic violations, multiple fraud cases on record, and named in multiple civil lawsuits.</p><p>A Yelp reviewer flagged unreliable business practices and missing funds, strongly cautioning others against engaging with her for any financial or business dealings.</p></div>
             </div>
           </div>
           <div class="record">
@@ -656,7 +660,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">Age 23</span>
               </div>
               <div class="type-tag">Romance Fraud / Extortion</div>
-              <p class="desc">Faked a pregnancy to extort $3,000 from a Miami man, threatening to get an abortion unless he paid. She sustained the lie for over a month before the victim investigated and uncovered the deception. Evidence confirms no pregnancy existed. She used emotional manipulation and financial coercion as her primary tools.</p>
+              <div class="desc"><p>Faked a pregnancy to extort $3,000 from a Miami man, threatening to get an abortion unless he paid. She sustained the lie for over a month before the victim investigated and uncovered the deception.</p><p>Evidence confirms no pregnancy existed. She used emotional manipulation and financial coercion as her primary tools.</p></div>
             </div>
           </div>
           <div class="record">
@@ -704,7 +708,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">🗓 2025–2026</span>
               </div>
               <div class="type-tag">Romance Fraud / Extortion</div>
-              <p class="desc">Faked a pregnancy to extort $300 from a Miami man. Provided a pregnancy test belonging to someone else as fabricated proof. Evidence of the deception was submitted and reviewed. A pattern consistent with deliberate financial manipulation.</p>
+              <div class="desc"><p>Faked a pregnancy to extort $300 from a Miami man. Provided a pregnancy test belonging to someone else as fabricated proof.</p><p>Evidence of the deception was submitted and reviewed. A pattern consistent with deliberate financial manipulation.</p></div>
             </div>
           </div>
           <div class="record">
@@ -748,7 +752,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">🗓 Multiple Years</span>
               </div>
               <div class="type-tag">Money / Business Fraud</div>
-              <p class="desc">Multiple reports of money and business scams in the Miami area. Public records reveal 11 criminal and traffic violations including disorderly conduct, battery-family violence, theft by conversion (felony), and multiple DWIs. A documented pattern of predatory and illegal behavior.</p>
+              <div class="desc"><p>Multiple reports of money and business scams in the Miami area.</p><p>Public records reveal 11 criminal and traffic violations including disorderly conduct, battery-family violence, theft by conversion (felony), and multiple DWIs. A documented pattern of predatory and illegal behavior.</p></div>
             </div>
           </div>
           <div class="record">
@@ -804,7 +808,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">🗓 Multiple Years</span>
               </div>
               <div class="type-tag">Romance Scam / Theft</div>
-              <p class="desc">Multiple reports of Kim Vallejo scamming men for free flights. She feigns romantic interest, convinces men to purchase her airfare, then spends the trip with other people upon arrival. Public records also confirm a shoplifting conviction. A documented pattern of manipulation and theft.</p>
+              <div class="desc"><p>Multiple reports of Kim Vallejo scamming men for free flights. She feigns romantic interest, convinces men to purchase her airfare, then spends the trip with other people upon arrival.</p><p>Public records also confirm a shoplifting conviction. A documented pattern of manipulation and theft.</p></div>
             </div>
           </div>
           <div class="record">
@@ -852,7 +856,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">🗓 2025–2026</span>
               </div>
               <div class="type-tag">Rental Fraud / Security Deposit Theft</div>
-              <p class="desc">Fabian Sbabo scammed a tenant out of a $7,000 security deposit. The tenant vacated the apartment leaving it in perfect condition and was legally entitled to her deposit back. Fabian refused to return the money. A clear case of rental fraud and security deposit theft.</p>
+              <div class="desc"><p>Fabian Sbabo scammed a tenant out of a $7,000 security deposit. The tenant vacated the apartment leaving it in perfect condition and was legally entitled to her deposit back.</p><p>Fabian refused to return the money. A clear case of rental fraud and security deposit theft.</p></div>
             </div>
           </div>
           <div class="record">
@@ -900,7 +904,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">🗓 Multiple Years</span>
               </div>
               <div class="type-tag">Theft / Fraud</div>
-              <p class="desc">Larnell Collier is a Miami-based club promoter with a documented criminal history and multiple community reports. A recent victim reports he stole her $700 camera, then blocked her and refused to return it. Public records confirm a pattern of criminal behavior. Not advised to do business with this individual.</p>
+              <div class="desc"><p>Larnell Collier is a Miami-based club promoter with a documented criminal history and multiple community reports.</p><p>A recent victim reports he stole her $700 camera, then blocked her and refused to return it. Public records confirm a pattern of criminal behavior. Not advised to do business with this individual.</p></div>
             </div>
           </div>
           <div class="record">
@@ -956,7 +960,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">🗓 Multiple Years</span>
               </div>
               <div class="type-tag">Labor Exploitation / Fraud</div>
-              <p class="desc">Jose Sandoval operates as a Miami promoter and event organizer. Multiple reports indicate he recruits women — particularly those who are undocumented — to work at lounges and clubs under the promise of payment. Victims report never receiving the wages they were owed. Not advised to do business with this individual.</p>
+              <div class="desc"><p>Jose Sandoval operates as a Miami promoter and event organizer. Multiple reports indicate he recruits women — particularly those who are undocumented — to work at lounges and clubs under the promise of payment.</p><p>Victims report never receiving the wages they were owed. Not advised to do business with this individual.</p></div>
             </div>
           </div>
           <div class="record">
@@ -1004,7 +1008,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
                 <span class="meta-i">🗓 Multiple Years</span>
               </div>
               <div class="type-tag">Real Estate Fraud / Misrepresentation</div>
-              <p class="desc">Rob Ellis operates in Miami as a realtor and small project developer. Reports allege misrepresentation, failure to disclose material facts, misleading sales practices, and failure to act in the client's best interest. Public records reveal a bankruptcy with multiple fraud-related dischargeability claims, multiple traffic violations, and a lawsuit filed against him in Columbus, Ohio for fraud.</p>
+              <div class="desc"><p>Rob Ellis operates in Miami as a realtor and small project developer. Reports allege misrepresentation, failure to disclose material facts, misleading sales practices, and failure to act in the client's best interest.</p><p>Public records reveal a bankruptcy with multiple fraud-related dischargeability claims, multiple traffic violations, and a lawsuit filed against him in Columbus, Ohio for fraud.</p></div>
             </div>
           </div>
           <div class="record">
@@ -1445,13 +1449,14 @@ function filter(cat,btn){
   document.querySelectorAll('.f-btn').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
   document.querySelectorAll('.card').forEach(c=>{
-    c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
+    c.style.display=(cat==='all'||c.dataset.cat===cat||c.dataset.pinned)?'':'none';
   });
 }
 function searchReports(q){
   const term=q.toLowerCase().trim();
   let visible=0;
   document.querySelectorAll('.card').forEach(c=>{
+    if(c.dataset.pinned){c.style.display='';return;}
     const name=c.querySelector('.rpt-name');
     const match=!term||(name&&name.textContent.toLowerCase().includes(term));
     c.style.display=match?'':'none';
