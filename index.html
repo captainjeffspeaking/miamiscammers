@@ -1450,15 +1450,17 @@ function filter(cat,btn){
 function searchReports(q){
   const term=q.toLowerCase().trim();
   let visible=0;
+  let firstMatch=null;
   document.querySelectorAll('.card').forEach(c=>{
     if(c.dataset.pinned){c.style.display='';return;}
-    const name=c.querySelector('.rpt-name');
-    const match=!term||(name&&name.textContent.toLowerCase().includes(term));
+    const text=c.textContent.toLowerCase();
+    const match=!term||text.includes(term);
     c.style.display=match?'':'none';
-    if(match) visible++;
+    if(match){visible++;if(!firstMatch)firstMatch=c;}
   });
   const nr=document.getElementById('noResults');
-  if(nr) nr.style.display=visible===0?'block':'none';
+  if(nr) nr.style.display=(visible===0&&term)?'block':'none';
+  if(firstMatch&&term) firstMatch.scrollIntoView({behavior:'smooth',block:'start'});
 }
 function copyLink(path){
   const url=path?location.origin+path:location.href;
