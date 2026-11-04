@@ -1463,7 +1463,6 @@ function searchReports(q){
   matches.forEach(c=>{c.style.display='';frag.appendChild(c);});
   _srGrid.insertBefore(frag,_srGrid.firstChild);
   nope.forEach(c=>c.style.display='none');
-  window.scrollTo({top:0,behavior:'instant'});
   const nr=document.getElementById('noResults');
   if(nr) nr.style.display=matches.length===0?'block':'none';
 }
