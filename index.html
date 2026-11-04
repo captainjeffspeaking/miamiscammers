@@ -1447,20 +1447,25 @@ function filter(cat,btn){
     c.style.display=(cat==='all'||c.dataset.cat===cat||c.dataset.pinned)?'':'none';
   });
 }
+const _srGrid=document.getElementById('grid');
+const _srOrig=Array.from(_srGrid.querySelectorAll('.card'));
 function searchReports(q){
   const term=q.toLowerCase().trim();
-  let visible=0;
-  let firstMatch=null;
-  document.querySelectorAll('.card').forEach(c=>{
-    if(c.dataset.pinned){c.style.display='';return;}
-    const text=c.textContent.toLowerCase();
-    const match=!term||text.includes(term);
-    c.style.display=match?'':'none';
-    if(match){visible++;if(!firstMatch)firstMatch=c;}
-  });
+  if(!term){
+    _srOrig.forEach(c=>{c.style.display='';_srGrid.appendChild(c);});
+    const nr=document.getElementById('noResults');
+    if(nr) nr.style.display='none';
+    return;
+  }
+  const matches=[],nope=[];
+  _srOrig.forEach(c=>(c.textContent.toLowerCase().includes(term)?matches:nope).push(c));
+  const frag=document.createDocumentFragment();
+  matches.forEach(c=>{c.style.display='';frag.appendChild(c);});
+  _srGrid.insertBefore(frag,_srGrid.firstChild);
+  nope.forEach(c=>c.style.display='none');
+  window.scrollTo({top:0,behavior:'instant'});
   const nr=document.getElementById('noResults');
-  if(nr) nr.style.display=(visible===0&&term)?'block':'none';
-  if(firstMatch&&term) firstMatch.scrollIntoView({behavior:'smooth',block:'start'});
+  if(nr) nr.style.display=matches.length===0?'block':'none';
 }
 function copyLink(path){
   const url=path?location.origin+path:location.href;
