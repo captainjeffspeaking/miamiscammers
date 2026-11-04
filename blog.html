@@ -51,6 +51,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(8,8,8,.93);ba
 .post-meta{font-size:11px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap}
 .post-read{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--accent);margin-top:4px}
 .post-read::after{content:'→'}
+.featured-section{padding:48px 0 0}
+.featured-label{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.featured-label::before{content:'';display:inline-block;width:18px;height:2px;background:var(--accent)}
+.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px}
+.featured-card{background:var(--card);border:1px solid rgba(0,201,167,.25);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:14px;transition:border-color .2s,transform .2s;cursor:pointer;position:relative}
+.featured-card:hover{border-color:rgba(0,201,167,.5);transform:translateY(-3px)}
+.featured-badge{position:absolute;top:16px;right:16px;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:rgba(0,201,167,.12);border:1px solid rgba(0,201,167,.25);color:var(--accent);padding:2px 8px;border-radius:100px}
+.section-divider{border:none;border-top:1px solid var(--border);margin:0 0 36px}
+.all-label{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.all-label::before{content:'';display:inline-block;width:18px;height:2px;background:var(--border)}
 footer{border-top:1px solid var(--border);padding:28px 24px}
 .foot-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
 .foot-logo{font-weight:800;font-size:14px;display:flex;align-items:center;gap:7px}
@@ -63,6 +73,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
   .logo{font-size:14px}
   .foot-inner{flex-direction:column;text-align:center}
   .post-grid{grid-template-columns:1fr}
+  .featured-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -89,8 +100,45 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
   </div>
 </div>
 
+<section class="featured-section">
+  <div class="wrap">
+    <div class="featured-label">Featured Articles</div>
+    <div class="featured-grid">
+
+      <a class="featured-card" href="/blog/florida-criminal-records">
+        <span class="featured-badge">★ Featured</span>
+        <span class="post-cat">Public Records</span>
+        <div class="post-title">How to Look Up Anyone's Criminal Record in Florida for Free</div>
+        <div class="post-excerpt">Florida's Sunshine Law makes an enormous amount of information public. Every free database and exactly how to use it before you hand over money or sign anything.</div>
+        <div class="post-meta"><span>📅 October 2026</span><span>⏱ 7 min read</span></div>
+        <span class="post-read">Read article</span>
+      </a>
+
+      <a class="featured-card" href="/blog/romance-scams">
+        <span class="featured-badge">★ Featured</span>
+        <span class="post-cat">Romance Fraud</span>
+        <div class="post-title">Romance Scams: How Scammers Use Fake Love to Steal Real Money</div>
+        <div class="post-excerpt">They spend weeks building your trust — then a crisis appears and they need money. Learn how to spot the playbook, what pig butchering is, and the one rule that prevents 100% of romance scams.</div>
+        <div class="post-meta"><span>📅 October 2026</span><span>⏱ 6 min read</span></div>
+        <span class="post-read">Read article</span>
+      </a>
+
+      <a class="featured-card" href="/blog/contractor-scams-miami">
+        <span class="featured-badge">★ Featured</span>
+        <span class="post-cat">Contractor Fraud</span>
+        <div class="post-title">Contractor Scams in Miami: How to Protect Yourself Before You Pay a Dime</div>
+        <div class="post-excerpt">Storm chasers, deposit ghosts, unlicensed tradespeople. South Florida is one of the worst markets in the country for contractor fraud — here's the full playbook and how to protect yourself.</div>
+        <div class="post-meta"><span>📅 November 2026</span><span>⏱ 7 min read</span></div>
+        <span class="post-read">Read article</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <section class="blog-index">
   <div class="wrap">
+    <div class="all-label">All Articles</div>
     <div class="post-grid">
 
       <a class="post-card" href="/blog/event-scams-miami">
