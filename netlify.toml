@@ -1,0 +1,18 @@
+[build]
+  command = "python3 build.py"
+  publish = "."
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/miami-scams"
+  to = "/miami-scams.html"
+  status = 200
+
+[[redirects]]
+  from = "/scammer-list"
+  to = "/scammer-list.html"
+  status = 200

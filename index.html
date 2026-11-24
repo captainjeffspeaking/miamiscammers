@@ -255,6 +255,25 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
 .card[data-slug]{cursor:pointer}
 .card[data-slug]:hover{border-color:#333;transform:translateY(-3px)}
 </style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Miami Scammers",
+  "url": "https://miamiscammers.com",
+  "description": "A community-powered fraud database exposing scammers across Miami, FL.",
+  "sameAs": ["https://www.instagram.com/miami_scammers/"],
+  "contactPoint": {"@type": "ContactPoint", "email": "miamiscammers2026@gmail.com", "contactType": "customer service"}
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is MiamiScammers.com legal?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Truth is an absolute defense against defamation. Court records and names are public information. We do not publish false statements or private data."}},
+    {"@type": "Question", "name": "How does MiamiScammers verify reports?", "acceptedAnswer": {"@type": "Answer", "text": "Every submission goes through manual review. We require evidence such as screenshots, receipts, or court records before a report is approved."}},
+    {"@type": "Question", "name": "Can someone request removal from MiamiScammers.com?", "acceptedAnswer": {"@type": "Answer", "text": "If a report is proven inaccurate, we will remove or correct it. Documented evidence of inaccuracy is required. Contact miamiscammers2026@gmail.com."}},
+    {"@type": "Question", "name": "Who runs MiamiScammers.com?", "acceptedAnswer": {"@type": "Answer", "text": "This site is operated by Miami community members who have personally experienced fraud. We are not affiliated with any law enforcement agency."}}
+  ]
+}</script>
 <!-- OneSignal Push Notifications -->
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
@@ -278,7 +297,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
     <div class="logo" onclick="show('home')" style="cursor:pointer"><span class="logo-dot"></span> Miami Scammers</div>
     <div class="nav-links">
       <a href="#" onclick="show('home')" class="on" id="nl-home">Reports</a>
-      <a href="#" onclick="show('submit')" id="nl-submit">Submit Report</a>
+      <a href="/scammer-list">Scammer List</a>
       <a href="#" onclick="show('about')" id="nl-about">About</a>
       <a href="/blog" id="nl-blog">Blog</a>
     </div>
@@ -297,6 +316,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
       <div class="hero-btns">
         <button class="btn btn-a" onclick="show('submit')">+ Submit a Report</button>
         <a href="#feed" class="btn btn-b">Browse Reports</a>
+        <a href="/miami-scams" class="btn btn-b">Miami Scams Guide</a>
       </div>
     </div>
   </div>
@@ -338,7 +358,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('daniel sharkey miami - Google Search.png')" style="cursor:pointer"><img class="photo" src="daniel sharkey miami - Google Search.png" alt="Daniel Sharkey"></span>
+            <span onclick="openLightbox('daniel-sharkey-miami.jpg')" style="cursor:pointer"><img class="photo" src="daniel-sharkey-miami.jpg" alt="Daniel Sharkey"></span>
             <div>
               <div class="rpt-name">Daniel Sharkey</div>
               <div class="meta">
@@ -382,7 +402,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('paula.png')" style="cursor:pointer"><img class="photo" src="paula.png" alt="Paula Rosello Mateu"></span>
+            <span onclick="openLightbox('paula-rosello-mateu-miami.jpg')" style="cursor:pointer"><img class="photo" src="paula-rosello-mateu-miami.jpg" alt="Paula Rosello Mateu"></span>
             <div>
               <div class="rpt-name">Paula Rosello Mateu</div>
               <div class="meta">
@@ -430,7 +450,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('nathan.png')" style="cursor:pointer"><img class="photo" src="nathan.png" alt="Nathan Tyler Guy"></span>
+            <span onclick="openLightbox('nathan-tyler-guy-miami.jpg')" style="cursor:pointer"><img class="photo" src="nathan-tyler-guy-miami.jpg" alt="Nathan Tyler Guy"></span>
             <div>
               <div class="rpt-name">Nathan Tyler Guy</div>
               <div class="meta">
@@ -479,7 +499,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('sismai.jpg')" style="cursor:pointer"><img class="photo" src="sismai.jpg" alt="Sismai Roman"></span>
+            <span onclick="openLightbox('sismai-roman-miami.jpg')" style="cursor:pointer"><img class="photo" src="sismai-roman-miami.jpg" alt="Sismai Roman"></span>
             <div>
               <div class="rpt-name">Sismai Roman</div>
               <div class="meta">
@@ -531,7 +551,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('Anna Telichenko .jpg')" style="cursor:pointer"><img class="photo" src="Anna Telichenko .jpg" alt="Anna Telichenko"></span>
+            <span onclick="openLightbox('anna-telichenko-miami.jpg')" style="cursor:pointer"><img class="photo" src="anna-telichenko-miami.jpg" alt="Anna Telichenko"></span>
             <div>
               <div class="rpt-name">Anna Telichenko</div>
               <div class="meta">
@@ -581,7 +601,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('natashagarden.jpg')" style="cursor:pointer"><img class="photo" src="natashagarden.jpg" alt="Natasha Garden"></span>
+            <span onclick="openLightbox('natasha-garden-miami.jpg')" style="cursor:pointer"><img class="photo" src="natasha-garden-miami.jpg" alt="Natasha Garden"></span>
             <div>
               <div class="rpt-name">Natasha Garden</div>
               <div class="meta">
@@ -625,7 +645,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('boniface.jpg')" style="cursor:pointer"><img class="photo" src="boniface.jpg" alt="Boniface Ogunti"></span>
+            <span onclick="openLightbox('boniface-ogunti-miami.jpg')" style="cursor:pointer"><img class="photo" src="boniface-ogunti-miami.jpg" alt="Boniface Ogunti"></span>
             <div>
               <div class="rpt-name">Boniface Ogunti</div>
               <div class="meta">
@@ -681,7 +701,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('kim.png')" style="cursor:pointer"><img class="photo" src="kim.png" alt="Kim Vallejo"></span>
+            <span onclick="openLightbox('kim-vallejo-miami.jpg')" style="cursor:pointer"><img class="photo" src="kim-vallejo-miami.jpg" alt="Kim Vallejo"></span>
             <div>
               <div class="rpt-name">Kim Vallejo</div>
               <div class="meta">
@@ -729,7 +749,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('robellis.png')" style="cursor:pointer"><img class="photo" src="robellis.png" alt="Rob Ellis"></span>
+            <span onclick="openLightbox('rob-ellis-miami.jpg')" style="cursor:pointer"><img class="photo" src="rob-ellis-miami.jpg" alt="Rob Ellis"></span>
             <div>
               <div class="rpt-name">Rob Ellis</div>
               <div class="meta">
@@ -786,7 +806,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('Jose.png')" style="cursor:pointer"><img class="photo" src="Jose.png" alt="Jose Sandoval"></span>
+            <span onclick="openLightbox('jose-sandoval-miami.jpg')" style="cursor:pointer"><img class="photo" src="jose-sandoval-miami.jpg" alt="Jose Sandoval"></span>
             <div>
               <div class="rpt-name">Jose Sandoval</div>
               <div class="meta">
@@ -834,7 +854,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('larnell.jpeg')" style="cursor:pointer"><img class="photo" src="larnell.jpeg" alt="Larnell Collier"></span>
+            <span onclick="openLightbox('larnell-collier-miami.jpg')" style="cursor:pointer"><img class="photo" src="larnell-collier-miami.jpg" alt="Larnell Collier"></span>
             <div>
               <div class="rpt-name">Larnell Collier</div>
               <div class="meta">
@@ -890,7 +910,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('fabian.png')" style="cursor:pointer"><img class="photo" src="fabian.png" alt="Fabian Sbabo"></span>
+            <span onclick="openLightbox('fabian-sbabo-miami.jpg')" style="cursor:pointer"><img class="photo" src="fabian-sbabo-miami.jpg" alt="Fabian Sbabo"></span>
             <div>
               <div class="rpt-name">Fabian Sbabo</div>
               <div class="meta">
@@ -938,7 +958,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('ernest.jpg')" style="cursor:pointer"><img class="photo" src="ernest.jpg" alt="Ernest Foutner"></span>
+            <span onclick="openLightbox('ernest-foutner-miami.jpg')" style="cursor:pointer"><img class="photo" src="ernest-foutner-miami.jpg" alt="Ernest Foutner"></span>
             <div>
               <div class="rpt-name">Ernest Foutner</div>
               <div style="font-size:12px;color:#aaa;margin-bottom:4px;">aka Ejei Opoku</div>
@@ -999,7 +1019,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-v">✓ Verified</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('nicolas.jpg')" style="cursor:pointer"><img class="photo" src="nicolas.jpg" alt="Nicolas Ruiz"></span>
+            <span onclick="openLightbox('nicolas-ruiz-miami.jpg')" style="cursor:pointer"><img class="photo" src="nicolas-ruiz-miami.jpg" alt="Nicolas Ruiz"></span>
             <div>
               <div class="rpt-name">Nicolas Ruiz <span style="font-weight:400;color:#aaa;">(Nick)</span></div>
               <div style="font-size:12px;color:#aaa;margin-bottom:4px;">aka Nick · @Carnickvore · @Organick365Group · Organick 365</div>
@@ -1052,7 +1072,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
             <span class="badge badge-r">⚠ Criminal Record</span>
           </div>
           <div class="card-body">
-            <span onclick="openLightbox('dylan-okoro.jpg')" style="cursor:pointer"><img class="photo" src="dylan-okoro.jpg" alt="Dylan Okoro"></span>
+            <span onclick="openLightbox('dylan-okoro-miami.jpg')" style="cursor:pointer"><img class="photo" src="dylan-okoro-miami.jpg" alt="Dylan Okoro"></span>
             <div>
               <div class="rpt-name">Dylan Okoro</div>
               <div style="font-size:12px;color:#aaa;margin-bottom:4px;">Born 1995 · Originally Bloomfield, NJ</div>
@@ -1114,6 +1134,7 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
 </div>
 
 <!-- SUBMIT PAGE -->
+<div id="submit"></div>
 <div class="page" id="page-submit">
   <div class="page-top">
     <div class="wrap">
@@ -1473,9 +1494,10 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
     <div class="foot-logo"><span class="logo-dot"></span> Miami Scammers</div>
     <div class="foot-links">
       <a href="#" onclick="show('home')">Reports</a>
-      <a href="#" onclick="show('submit')">Submit</a>
-      <a href="#" onclick="show('about')">About</a>
+      <a href="/scammer-list">Scammer List</a>
+      <a href="/miami-scams">Miami Scams Guide</a>
       <a href="/blog">Blog</a>
+      <a href="https://www.instagram.com/miami_scammers/" target="_blank" rel="noopener">Instagram</a>
     </div>
     <div style="max-width:700px;margin:16px auto 12px;background:rgba(255,59,59,.05);border:1px solid rgba(255,59,59,.13);border-radius:9px;padding:14px 18px;">
       <p style="font-size:11px;color:#777;line-height:1.7;text-align:center;">⚖️ <strong style="color:#aaa">Legal Disclaimer:</strong> MiamiScammers.com is a community-powered public information resource. All reports are based on publicly available records and submitted evidence. We do not guarantee the accuracy of all information — errors may exist. Conduct your own research before drawing conclusions. Nothing on this site constitutes legal advice or a definitive finding of guilt. All persons are presumed innocent until proven otherwise in a court of law.</p>
