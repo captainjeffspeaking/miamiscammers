@@ -17,6 +17,7 @@ BLOG_ARTICLES = [
     ('contractor-scams-miami', '2026-11-01'),
     ('online-service-scams-miami', '2026-11-01'),
     ('art-basel-scams', '2026-11-23'),
+    ('daniel-sharkey', '2026-11-24'),
 ]
 
 def e(s): return htmllib.escape(str(s))
