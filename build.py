@@ -92,6 +92,17 @@ footer{border-top:1px solid var(--border);padding:28px 24px}
 def profile_page(r):
     extra_meta = ''.join(f'\n          <span class="meta-i">{e(m)}</span>' for m in r.get('extraMeta', []))
     desc_html = '\n              '.join(f'<p>{e(p)}</p>' for p in r['desc'])
+    if r.get('affiliations'):
+        aff_items = ' '.join(
+            f'<strong style="color:#f0f0f0">{e(a["name"])}</strong> — {e(a["desc"])}'
+            for a in r['affiliations']
+        )
+        affiliations_html = f'''<div style="margin-top:12px;padding:12px 14px;background:rgba(255,59,59,.04);border:1px solid rgba(255,59,59,.12);border-radius:8px">
+          <div style="font-size:10px;font-weight:700;color:#777;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">Known Affiliations</div>
+          <div style="font-size:13px;color:#ccc;line-height:1.6">{aff_items}</div>
+        </div>'''
+    else:
+        affiliations_html = ''
     bullets_html = '\n'.join(
         f'              <div class="bullet-row"><span class="bullet-dot">&#x25CF;</span><span class="bullet-text">{e(b)}</span></div>'
         for b in r['bullets']
@@ -184,6 +195,7 @@ def profile_page(r):
         <div class="desc">
               {desc_html}
         </div>
+        {affiliations_html}
       </div>
     </div>
     <div class="record">

@@ -8,12 +8,16 @@
     "titleSEO": "Daniel Sharkey — Business Fraud Report | Miami Scammers",
     "metaDesc": "Daniel Sharkey breached a $10,000 contract to produce a Miami event, cancelled two days prior without notice or refund, and left vendors unpaid. 72 criminal and traffic records on file.",
     "image": "daniel-sharkey-miami.jpg",
-    "imageW": 800, "imageH": 600,
+    "imageW": 800,
+    "imageH": 600,
     "location": "Miami, FL",
     "years": "2026",
     "filed": "May 2026",
     "pinned": true,
-    "desc": ["Breached a $10,000 contract after being hired to produce an event for a Miami-based company.", "Cancelled the event two days prior without notice or refund. The event never took place and funds were not returned.", "Known affiliation: Aurum Nexus Global LLC — the company behind his Miami events including the New Horizons Private Capital Forum."],
+    "desc": [
+      "Breached a $10,000 contract after being hired to produce an event for a Miami-based company.",
+      "Cancelled the event two days prior without notice or refund. The event never took place and funds were not returned."
+    ],
     "recordTitle": "Criminal & Traffic Records",
     "recordSrc": "BeenVerified.com",
     "bullets": [
@@ -22,7 +26,13 @@
     ],
     "recordNote": "Data sourced from publicly available records via BeenVerified.com. Miami Scammers does not guarantee accuracy of third-party record data.",
     "blogLink": "/blog/event-scams-miami",
-    "blogLabel": "Miami Event Scams Guide"
+    "blogLabel": "Miami Event Scams Guide",
+    "affiliations": [
+      {
+        "name": "Aurum Nexus Global LLC",
+        "desc": "The company behind his Miami events including the New Horizons Private Capital Forum. Aurum Nexus Global LLC is the full legal business name used in contracts and event promotions."
+      }
+    ]
   },
   {
     "num": "002",
@@ -33,11 +43,15 @@
     "titleSEO": "Paula Rosello Mateu — Rental Fraud Report | Miami Scammers",
     "metaDesc": "Paula Rosello Mateu fraudulently represented a Miami Beach villa as her family's property, collected a deposit for a paid event, then disappeared — blocking the victim and deactivating her Instagram.",
     "image": "paula-rosello-mateu-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "Miami Beach, FL",
     "years": "2025–2026",
     "filed": "May 2026",
-    "desc": ["Spanish national and tennis player who fraudulently represented a Miami Beach villa as belonging to her family. Signed a venue contract with a Miami-based company for a paid event and collected a deposit to secure the property.", "She then disappeared — deactivating her Instagram, blocking the victim on WhatsApp, and cutting off all contact. Investigation revealed the villa was never her family's property."],
+    "desc": [
+      "Spanish national and tennis player who fraudulently represented a Miami Beach villa as belonging to her family. Signed a venue contract with a Miami-based company for a paid event and collected a deposit to secure the property.",
+      "She then disappeared — deactivating her Instagram, blocking the victim on WhatsApp, and cutting off all contact. Investigation revealed the villa was never her family's property."
+    ],
     "recordTitle": "Evidence on File",
     "recordSrc": "Victim-Submitted",
     "bullets": [
@@ -58,11 +72,15 @@
     "titleSEO": "Nathan Tyler Guy — Rental Fraud Report | Miami Scammers",
     "metaDesc": "Nathan Tyler Guy posed as a landlord on Facebook Marketplace, collected deposits from at least 7 victims totaling $50,000+, and was arrested in April 2026 on organized fraud and grand theft charges.",
     "image": "nathan-tyler-guy-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "Miami Edgewater, FL",
     "years": "2025–2026",
     "filed": "May 2026",
-    "desc": ["Posed as a landlord on Facebook Marketplace, listing fake rental properties and collecting deposits from victims. Used FaceTime-style virtual showings and phony lease agreements to appear legitimate.", "At least 7 victims lost a combined $50,000+, with individual losses ranging from $1,000 to $35,000. Arrested April 2026 and charged with organized fraud, second-degree grand theft, and six counts of third-degree grand theft."],
+    "desc": [
+      "Posed as a landlord on Facebook Marketplace, listing fake rental properties and collecting deposits from victims. Used FaceTime-style virtual showings and phony lease agreements to appear legitimate.",
+      "At least 7 victims lost a combined $50,000+, with individual losses ranging from $1,000 to $35,000. Arrested April 2026 and charged with organized fraud, second-degree grand theft, and six counts of third-degree grand theft."
+    ],
     "recordTitle": "Criminal Record",
     "recordSrc": "Miami Police / Public Records",
     "bullets": [
@@ -83,11 +101,15 @@
     "titleSEO": "Sismai Roman — Business Fraud Report | Miami Scammers",
     "metaDesc": "Sismai Roman has 8 criminal and traffic violations on record, multiple fraud cases, and has been named in multiple civil lawsuits. A Yelp reviewer flagged missing funds and unreliable business practices.",
     "image": "sismai-roman-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "Miami, FL",
     "years": "2024–2026",
     "filed": "May 2026",
-    "desc": ["Miami-based individual with a documented history of criminal and traffic violations, multiple fraud cases on record, and named in multiple civil lawsuits.", "A Yelp reviewer flagged unreliable business practices and missing funds, strongly cautioning others against engaging with her for any financial or business dealings."],
+    "desc": [
+      "Miami-based individual with a documented history of criminal and traffic violations, multiple fraud cases on record, and named in multiple civil lawsuits.",
+      "A Yelp reviewer flagged unreliable business practices and missing funds, strongly cautioning others against engaging with her for any financial or business dealings."
+    ],
     "recordTitle": "Criminal & Civil Records",
     "recordSrc": "Public Records",
     "bullets": [
@@ -109,12 +131,19 @@
     "titleSEO": "Anna Telichenko — Romance Fraud Report | Miami Scammers",
     "metaDesc": "Anna Telichenko faked a pregnancy to extort $3,000 from a Miami man, sustaining the deception for over a month. The pregnancy was confirmed fabricated through investigation.",
     "image": "anna-telichenko-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "North Miami, FL",
     "years": "2025–2026",
     "filed": "May 2026",
-    "extraMeta": ["Age 23", "Originally from Ukraine"],
-    "desc": ["Faked a pregnancy to extort $3,000 from a Miami man, threatening to get an abortion unless he paid. She sustained the lie for over a month before the victim investigated and uncovered the deception.", "Evidence confirms no pregnancy existed. She used emotional manipulation and financial coercion as her primary tools."],
+    "extraMeta": [
+      "Age 23",
+      "Originally from Ukraine"
+    ],
+    "desc": [
+      "Faked a pregnancy to extort $3,000 from a Miami man, threatening to get an abortion unless he paid. She sustained the lie for over a month before the victim investigated and uncovered the deception.",
+      "Evidence confirms no pregnancy existed. She used emotional manipulation and financial coercion as her primary tools."
+    ],
     "recordTitle": "Fraud & Extortion",
     "recordSrc": "Victim-Submitted Evidence",
     "bullets": [
@@ -135,11 +164,15 @@
     "titleSEO": "Natasha Garden — Romance Fraud Report | Miami Scammers",
     "metaDesc": "Natasha Garden faked a pregnancy to extort $300 from a Miami man, providing a fraudulent pregnancy test as proof. 3 criminal and traffic violations on public record.",
     "image": "natasha-garden-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "Miami, FL",
     "years": "2025–2026",
     "filed": "May 2026",
-    "desc": ["Faked a pregnancy to extort $300 from a Miami man. Provided a pregnancy test belonging to someone else as fabricated proof.", "Evidence of the deception was submitted and reviewed. A pattern consistent with deliberate financial manipulation."],
+    "desc": [
+      "Faked a pregnancy to extort $300 from a Miami man. Provided a pregnancy test belonging to someone else as fabricated proof.",
+      "Evidence of the deception was submitted and reviewed. A pattern consistent with deliberate financial manipulation."
+    ],
     "recordTitle": "Criminal & Fraud Records",
     "recordSrc": "BeenVerified.com",
     "bullets": [
@@ -159,11 +192,15 @@
     "titleSEO": "Boniface Ogunti — Business Fraud Report | Miami Scammers",
     "metaDesc": "Boniface Ogunti has 11 criminal and traffic violations including felony theft by conversion, battery, and multiple DWIs. Multiple Miami community reports of money and business fraud.",
     "image": "boniface-ogunti-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "Miami, FL",
     "years": "Multiple Years",
     "filed": "May 2026",
-    "desc": ["Multiple reports of money and business scams in the Miami area.", "Public records reveal 11 criminal and traffic violations including disorderly conduct, battery-family violence, theft by conversion (felony), and multiple DWIs. A documented pattern of predatory and illegal behavior."],
+    "desc": [
+      "Multiple reports of money and business scams in the Miami area.",
+      "Public records reveal 11 criminal and traffic violations including disorderly conduct, battery-family violence, theft by conversion (felony), and multiple DWIs. A documented pattern of predatory and illegal behavior."
+    ],
     "recordTitle": "Criminal & Fraud Records",
     "recordSrc": "Public Records",
     "bullets": [
@@ -186,11 +223,15 @@
     "titleSEO": "Kim Vallejo — Romance Scam Report | Miami Scammers",
     "metaDesc": "Kim Vallejo fakes romantic interest in men to get free flights, then ignores them upon arrival. She has a shoplifting conviction on public record and multiple victim reports.",
     "image": "kim-vallejo-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "Miami, FL",
     "years": "Multiple Years",
     "filed": "May 2026",
-    "desc": ["Multiple reports of Kim Vallejo scamming men for free flights. She feigns romantic interest, convinces men to purchase her airfare, then spends the trip with other people upon arrival.", "Public records also confirm a shoplifting conviction. A documented pattern of manipulation and theft."],
+    "desc": [
+      "Multiple reports of Kim Vallejo scamming men for free flights. She feigns romantic interest, convinces men to purchase her airfare, then spends the trip with other people upon arrival.",
+      "Public records also confirm a shoplifting conviction. A documented pattern of manipulation and theft."
+    ],
     "recordTitle": "Criminal & Fraud Records",
     "recordSrc": "Public Records / Community Reports",
     "bullets": [
@@ -211,11 +252,15 @@
     "titleSEO": "Rob Ellis — Real Estate Fraud Report | Miami Scammers",
     "metaDesc": "Miami realtor Rob Ellis has a bankruptcy with multiple fraud-related dischargeability claims and was sued in Columbus, Ohio for fraud. Community reports allege misrepresentation and breach of fiduciary duty.",
     "image": "rob-ellis-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "Miami, FL (originally from Ohio)",
     "years": "Multiple Years",
     "filed": "June 2026",
-    "desc": ["Rob Ellis operates in Miami as a realtor and small project developer. Reports allege misrepresentation, failure to disclose material facts, misleading sales practices, and failure to act in the client's best interest.", "Public records reveal a bankruptcy with multiple fraud-related dischargeability claims, multiple traffic violations, and a lawsuit filed against him in Columbus, Ohio for fraud."],
+    "desc": [
+      "Rob Ellis operates in Miami as a realtor and small project developer. Reports allege misrepresentation, failure to disclose material facts, misleading sales practices, and failure to act in the client's best interest.",
+      "Public records reveal a bankruptcy with multiple fraud-related dischargeability claims, multiple traffic violations, and a lawsuit filed against him in Columbus, Ohio for fraud."
+    ],
     "recordTitle": "Legal & Court Records",
     "recordSrc": "Federal Court / Public Records",
     "bullets": [
@@ -238,11 +283,15 @@
     "titleSEO": "Jose Sandoval — Labor Exploitation Report | Miami Scammers",
     "metaDesc": "Jose Sandoval recruits women — particularly undocumented workers — to work at Miami clubs and lounges with promises of pay that never materializes. Multiple independent victim accounts on file.",
     "image": "jose-sandoval-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "Miami, FL",
     "years": "Multiple Years",
     "filed": "July 2026",
-    "desc": ["Jose Sandoval operates as a Miami promoter and event organizer. Multiple reports indicate he recruits women — particularly those who are undocumented — to work at lounges and clubs under the promise of payment.", "Victims report never receiving the wages they were owed. Not advised to do business with this individual."],
+    "desc": [
+      "Jose Sandoval operates as a Miami promoter and event organizer. Multiple reports indicate he recruits women — particularly those who are undocumented — to work at lounges and clubs under the promise of payment.",
+      "Victims report never receiving the wages they were owed. Not advised to do business with this individual."
+    ],
     "recordTitle": "Community Reports",
     "recordSrc": "Multiple Victim Accounts",
     "bullets": [
@@ -263,11 +312,15 @@
     "titleSEO": "Larnell Collier — Theft & Fraud Report | Miami Scammers",
     "metaDesc": "Miami club promoter Larnell Collier stole a victim's $700 camera and refused to return it. Public records show theft, resisting arrest, obstruction, and disorderly conduct charges.",
     "image": "larnell-collier-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "Miami, FL",
     "years": "Multiple Years",
     "filed": "July 2026",
-    "desc": ["Larnell Collier is a Miami-based club promoter with a documented criminal history and multiple community reports.", "A recent victim reports he stole her $700 camera, then blocked her and refused to return it. Public records confirm a pattern of criminal behavior. Not advised to do business with this individual."],
+    "desc": [
+      "Larnell Collier is a Miami-based club promoter with a documented criminal history and multiple community reports.",
+      "A recent victim reports he stole her $700 camera, then blocked her and refused to return it. Public records confirm a pattern of criminal behavior. Not advised to do business with this individual."
+    ],
     "recordTitle": "Criminal & Fraud Records",
     "recordSrc": "Public Records / Victim Reports",
     "bullets": [
@@ -290,11 +343,15 @@
     "titleSEO": "Fabian Sbabo — Rental Fraud Report | Miami Scammers",
     "metaDesc": "Fabian Sbabo withheld a $7,000 security deposit from a Miami tenant who vacated the apartment in perfect condition, refusing all communication about returning the funds.",
     "image": "fabian-sbabo-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "Miami, FL",
     "years": "2025–2026",
     "filed": "July 2026",
-    "desc": ["Fabian Sbabo scammed a tenant out of a $7,000 security deposit. The tenant vacated the apartment leaving it in perfect condition and was legally entitled to her deposit back.", "Fabian refused to return the money. A clear case of rental fraud and security deposit theft."],
+    "desc": [
+      "Fabian Sbabo scammed a tenant out of a $7,000 security deposit. The tenant vacated the apartment leaving it in perfect condition and was legally entitled to her deposit back.",
+      "Fabian refused to return the money. A clear case of rental fraud and security deposit theft."
+    ],
     "recordTitle": "Fraud Report",
     "recordSrc": "Victim Report",
     "bullets": [
@@ -316,11 +373,16 @@
     "titleSEO": "Ernest Foutner — Fraud & Theft of Services Report | Miami Scammers",
     "metaDesc": "Ernest Foutner collected $5,200 from a victim for websites and book services, delivered nothing, and has a public record of deposit account fraud. Also reported for rental fraud and squatting.",
     "image": "ernest-foutner-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "Miami, FL",
     "years": "Multiple Years",
     "filed": "September 2026",
-    "desc": ["Ernest Foutner befriended the victim, gained her trust, and convinced her he was skilled in website design, publishing, and marketing. He promised to build two websites and illustrate, publish, and market three children's books — collecting $5,200 in payments — but failed to deliver.", "After months, he provided only incomplete drafts and poor-quality, heavily AI-generated material. He repeatedly lied, manipulated the victim, and changed his business names multiple times to obscure his history.", "Additional intel reports he engages in rental fraud — squatting in apartments and living rent-free until forcibly evicted. Public records show an arrest for deposit account fraud of $1,500 or more."],
+    "desc": [
+      "Ernest Foutner befriended the victim, gained her trust, and convinced her he was skilled in website design, publishing, and marketing. He promised to build two websites and illustrate, publish, and market three children's books — collecting $5,200 in payments — but failed to deliver.",
+      "After months, he provided only incomplete drafts and poor-quality, heavily AI-generated material. He repeatedly lied, manipulated the victim, and changed his business names multiple times to obscure his history.",
+      "Additional intel reports he engages in rental fraud — squatting in apartments and living rent-free until forcibly evicted. Public records show an arrest for deposit account fraud of $1,500 or more."
+    ],
     "recordTitle": "Criminal Record — Fraud",
     "recordSrc": "Public Records",
     "bullets": [
@@ -345,11 +407,16 @@
     "titleSEO": "Nicolas Ruiz — Event Fraud Report | Miami Scammers",
     "metaDesc": "Miami event promoter Nicolas Ruiz (Nick), operating as Organick 365, repeatedly left venues and vendors unpaid across multiple events. Do not engage for any event, vendor, or business arrangement.",
     "image": "nicolas-ruiz-miami.jpg",
-    "imageW": 800, "imageH": 800,
+    "imageW": 800,
+    "imageH": 800,
     "location": "Miami, FL",
     "years": "2025–2026",
     "filed": "November 2026",
-    "desc": ["Nicolas (Nick) Ruiz is a Miami event promoter operating under Organick 365 / @Organick365Group with a documented pattern of overpromising, underdelivering, and leaving venues and vendors unpaid.", "Multiple events associated with him have gone sideways — venues left unpaid, vendors left without compensation, and attendees left with nothing. He promotes events publicly while the logistics are not in place, creating a situation where everyone involved loses.", "Do not work with this individual on any event, vendor arrangement, or business deal. Multiple people have been burned."],
+    "desc": [
+      "Nicolas (Nick) Ruiz is a Miami event promoter operating under Organick 365 / @Organick365Group with a documented pattern of overpromising, underdelivering, and leaving venues and vendors unpaid.",
+      "Multiple events associated with him have gone sideways — venues left unpaid, vendors left without compensation, and attendees left with nothing. He promotes events publicly while the logistics are not in place, creating a situation where everyone involved loses.",
+      "Do not work with this individual on any event, vendor arrangement, or business deal. Multiple people have been burned."
+    ],
     "recordTitle": "Reported Conduct",
     "recordSrc": "Submitted Evidence",
     "bullets": [
@@ -371,12 +438,19 @@
     "titleSEO": "Dylan Okoro — Criminal Record & Harassment Report | Miami Scammers",
     "metaDesc": "Dylan Okoro has 14 public criminal and traffic records including a 2025 aggravated assault with a firearm charge. Also reported for stalking and harassing women in Miami. Originally from Bloomfield, NJ.",
     "image": "dylan-okoro-miami.jpg",
-    "imageW": 717, "imageH": 800,
+    "imageW": 717,
+    "imageH": 800,
     "location": "Miami, FL",
     "years": "2025–2026",
     "filed": "November 2026",
-    "extraMeta": ["Born 1995", "Originally Bloomfield, NJ"],
-    "desc": ["Dylan Okoro has 14 publicly available criminal and traffic records including a 2025 arrest for Aggravated Assault with a Firearm. He has also been reported for stalking and harassing women in the Miami area.", "Public records confirm charges including Grand Theft (Armed), providing a false name after arrest, and fleeing/eluding a law enforcement officer in a moving vehicle. Exercise extreme caution."],
+    "extraMeta": [
+      "Born 1995",
+      "Originally Bloomfield, NJ"
+    ],
+    "desc": [
+      "Dylan Okoro has 14 publicly available criminal and traffic records including a 2025 arrest for Aggravated Assault with a Firearm. He has also been reported for stalking and harassing women in the Miami area.",
+      "Public records confirm charges including Grand Theft (Armed), providing a false name after arrest, and fleeing/eluding a law enforcement officer in a moving vehicle. Exercise extreme caution."
+    ],
     "recordTitle": "Criminal & Traffic Records — 14 on File",
     "recordSrc": "Public Records",
     "bullets": [
